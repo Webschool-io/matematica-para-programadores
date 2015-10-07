@@ -1,4 +1,6 @@
-Nessa aula vamos aprender um pouco mais sobre os fundamentos da matemática que são apenas duas operações:
+# Matemática para programadores
+
+Nesse curso vamos aprender um pouco mais sobre os fundamentos da matemática, iniciaremos pelas suas duas operações básicas:
 
 - adição
 - subtração.
@@ -10,10 +12,10 @@ E vou demonstrar como podemos compor essas duas para criarmos funções matemát
 - divisão;
 - exponenciação;
 - radiciação;
-- logaritmo;
+- logarítmo;
 - etc.
 
-Além da base matemática para isso também iremos aprender e praticar muito a composição, que é uma caraterística clássica do paradigma funcional.
+Além da base matemática para isso também iremos aprender e praticar muito a composição, que é uma caraterística clássica do paradigma funcional, onde compomos uma função mais complexa com outras menores.
 
 Vamos iniciar criando nossas duas primeiras funções básicas, que chamarei de *funções atômicas*, ok?
 
