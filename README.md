@@ -193,9 +193,13 @@ Agora após finalizarmos essas operações básicas podemos agora resolver funç
 A porcentagem quer saber qual a parte de um total, por exemplo:
 
 > 1% 777 é 7
+> 
 > 5% de 100 é 5
+> 
 > 10% de 700 é 70
+> 
 > 50% de 840 é 420
+> 
 > 100% de 666 é 666
 
 Sabendo disso vamos criar o algoritmo para solucionar a porcentagem, vamos dividir ele em 2 problemas:
