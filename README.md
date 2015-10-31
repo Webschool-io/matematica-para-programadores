@@ -204,8 +204,8 @@ A porcentagem quer saber qual a parte de um total, por exemplo:
 
 Sabendo disso vamos criar o algoritmo para solucionar a porcentagem, vamos dividir ele em 2 problemas:
 
-- X % 0 = 0
-- X % X = 1
+- 0% de X  = 0
+- X% de X  = X
 
 ```suissagol
 Recebo 2 parâmetros:
@@ -219,7 +219,7 @@ inicio o CONTADOR da multiplicação com 1
 se Y for diferente de 0 faça
   se X for igual a Y faça
     retorne 1;
-retorne falso;
+retorne 0;
 ```
 
 ```js
@@ -248,17 +248,19 @@ Beleza resolvemos esses dois casos, agora vamos resolver o caso geral:
 
 Eu resolvo a porcentagem de uma forma um pouco diferente das ensinadas na escola, pois eu faço eu faço da seguinte forma:
 
-> Quanto é 16% de 18.731?
- 
+> Quanto é 22% de 18600?
+
 O ensinado normalmente é algo assim:
 
 ```math
-18600 * 0.14 = 2604
+18600 * 0.22 = 4092
 ```
 
 Porém ninguém, normal, faz isso de cabeça, eu faço assim:
 
 > Quando a porcentagem é menor que 10 eu divido por 1% e multiplico o valor pela poercentagem desejada. Por exemplo: 3% de 600 é 18.
+
+Agora vamos ver o 3% de 18.600
 
 ```math
 18600 * 0.01 = 186
@@ -267,17 +269,23 @@ Porém ninguém, normal, faz isso de cabeça, eu faço assim:
 
 Agora quando a **porcentagem** é maior que 10% eu faço assim:
 
-> Quando a porcentagem é maior que 10 eu divido por 10% e multiplico o valor pela poercentagem desejada. Por exemplo: 22% de 18600 é 18.
+> Quando a porcentagem é maior que 10 eu divido por 10% e multiplico o valor pela porcentagem desejada.
 
 ```math
-18600 * 0.20 = 3720
+18600 * 0.10 = 1860
+1860 * 2 = 3720
 18600 * 0.01 = 186
-186 * 2 =j
-4092
-18600 * 0.01 = 186
-186 * 4 = 744
-1860 + 744 = 2604
+186 * 2 = 372
+3720 + 372 = 4092
 ```
+
+Explicando o algoritmo:
+
+1. Primeiramente multiplicamos o total por 10% (0.10) = 1860
+2. Multiplicamos o seu valor por 2, para chegarmos no 20% (0.20) = 3720
+2. Depois multiplicamos o total por 1% (0.01) = 186
+3. Pegamos o resultado da unidade para multiplicar por 2, que é o 2% = 372
+4. Para finalmente somar o 20% com o 2% = 4092
 
 ## Exponenciação
 
