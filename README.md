@@ -289,7 +289,7 @@ Explicando o algoritmo:
 
 ## Exponenciação
 
-A **exponenciação** também conhecida por potência se dá por qual cálculo?
+A **exponenciação** também conhecida por potência, dá-se por qual cálculo?
 
 > A base é multiplicada por ela mesmo pelo mesmo número da potência.
 
@@ -301,10 +301,11 @@ Na **exponenciação** você tem:
 Exemplo, na programação utilizamos o `^` para referenciar a potência:
 
 ```math
-3 ˆ2  = 9// 3 elevado ao quadrado é igual a 9
-// 3 é a base
-// 2 é a potência
-3(1) * 3(2) = 9
+2 ˆ 3  = 8 // 2 elevado ao cubo é igual a 8
+// 2 é a base
+// 3 é a potência
+2[1] * 2[2] * 2[3] = 8
+// o 2 é multiplicado por ele mesmo 3(base) vezes
 ```
 
 Então você pega a `base` e multiplica por ela mesmo o número de vezes da `potência`, como já sabemos como a multiplicação funciona vamos converter a exponenciação em multiplicação:
@@ -365,3 +366,157 @@ Então o inverso dessa potência é:
 ```
 
 Nesse caso dividimos o `81` por `3` até o resultado ser `1`, nesse caso dividimos o `81` que é a base por `3` que o ?????? até não podermos mais dividí-lo, nesse caso o resultado é 4 pois foi o número de passos necessários até reduzirmos o `81` para `1`.
+
+## Radiciação 
+
+> Uma raiz quadrada de um número x é um número que, quando multiplicado por si próprio, iguala x.[1] Por exemplo, 4 e -4 são raízes quadradas de 16, pois 4^2 = (-4)^2 = 16.
+
+fonte: [https://pt.wikipedia.org/wiki/Raiz_quadrada](https://pt.wikipedia.org/wiki/Raiz_quadrada)
+
+```
+√¯16 = 4
+```
+
+Na raíz quadrada o índice do radical é `2`, logo basta elevar o resultado pelo índice para achar o radicando, `16`.
+
+Logo a operação inversa se dá pela exponenciação, elevando o resultado na potência 2:
+
+```
+4 ^ 2 = 16
+```
+
+Você sempre irá elevar o resultado pelo radical, por exemplo na raíz cúbica:
+
+```
+3√¯729 = 9
+```
+
+Invertendo sua lógica:
+
+```
+9 ^ 3 = 729
+```
+
+Mas e caso você deseje descobrir o resultado de uma raíz quadrada?
+
+```
+√¯49 = x
+```
+
+Nesse caso você precisa achar o `x` que é um número que elevado ao quadrado, resultando no `49`, para resolver essa conta vamos inverter a raíz:
+
+```
+49 = x ^ 2
+49 = x . x
+49/x = x
+```
+
+Assim chegamos a conclusão que o radicando dividido pelo resultado `x` dará `x`.
+
+Dessa forma fica simples para você testar os números até encontrar seu resultado, sabendo que o radicando é um número ímpar podemos deduzir que seu resultado deverá ser maior que 2.
+
+> Pois qualquer número ímpar dividido por um número par sempre terá resto.
+
+E como estamos procurando um valor que multiplicado por ele mesmo dará `49`, deduzimos que o `x` **PRECISA** ser um divisor de 49. Nesse caso 
+
+```
+49/x = x
+49/2 = 24,5
+49/3 = 16,3...
+49/4 = 12,25
+49/5 = 9,8
+49/6 = 8,166...
+49/7 = 7
+```
+
+Obviamente você não irá testar todos esses valores, para isso vamos criar o nosso algoritmo:
+
+```suissagol
+z√¯y = x
+
+Recebo 2 parâmetros:
+
+- indice (da raíz)
+- radicando
+
+radicando / indice = indice
+contador = 1
+
+faça de 1 até radicando incrementando o contador em 1
+  se (radicando / contador == contador)
+    retorne contador
+```
+
+
+Agora vamos fazer o teste de mesa:
+
+```js
+function raiz(indice, radicando) {
+  for(var contador = indice; contador < radicando; contador++) {
+    if( (radicando / contador) == contador)
+      return contador;
+  }
+}
+```
+
+Agora vamos executar nossa função para testarmos sua validade:
+
+```
+raiz(2, 4)
+2
+raiz(2, 9)
+3
+raiz(2, 81)
+9
+```
+
+Pronto criamos um algoritmo nosso para resolver a raíz de uma forma simples
+
+## Progressões Aritméticas:
+
+Definição: P.A são sequências de números, em que a diferença entre um número e seu antecedente é igual à uma razão `r`. Elas podem ser crescentes ou decrescentes. Nas progressões crescentes, a razão será positiva, e nas decrescentes, será negativa.
+
+O valor da razão `r` será calculado da seguinte forma:
+
+r = a2 – a1 ou r = a3 – a2 ou r = a4 – a3 ou r = a5 – a4 ou r = a6 – a5, e assim por diante.
+
+Sempre o elementos subtraído de seu antecessor.
+
+Nos exercícios de progressões aritméticas (P.A.), devemos ter em mente duas fórmulas:
+
+a) N-ésimo termo de uma P.A.:
+
+A fórmula abaixo é usada quando se quer determinar o n-ésimo termo de uma progressão aritmética.
+
+an = a1 + (n – 1) . r
+
+Onde,
+
+an = n-ésimo termo a ser achado.
+
+a1 = primeiro termo da sequência.
+
+n = número de termos da sequência.
+
+r = razão da sequência, encontrado pela diferença de um termo e seu antecessor.
+
+Vamos desenvolver um algoritmo para resolver a PA:
+
+```
+a1 = 2;
+r = 3;
+n = 10;
+// Nossa PA começará com o número 2
+// Com uma razão igual a 3
+// Possuindo 10 termos na sequência
+
+an = a1 + (n – 1) . r
+an = a1 + (9) . r
+
+// Aqui resolvemos a conta entre ( ) pois tem maior precedência
+// Logo sabemos que o resultado dessa conta sempre será o tot
+
+```
+
+
+
