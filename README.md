@@ -411,7 +411,11 @@ Nesse caso você precisa achar o `x` que é um número que elevado ao quadrado, 
 49/x = x
 ```
 
-Assim chegamos a conclusão que o radicando dividido pelo resultado `x` dará `x`.
+Assim chegamos a conclusão que o radicando dividido pelo resultado `x` dará `x`. Com isso podemos deduzir uma fórmula de resolução de raíz quadrada:
+
+> √¯y = x
+> y/x = x
+
 
 Dessa forma fica simples para você testar os números até encontrar seu resultado, sabendo que o radicando é um número ímpar podemos deduzir que seu resultado deverá ser maior que 2.
 
@@ -472,7 +476,13 @@ raiz(2, 81)
 
 Pronto criamos um algoritmo nosso para resolver a raíz de uma forma simples
 
-## Progressões Aritméticas
+## Precedência
+
+Na matemática, assim como na programação, podemos mudar a ordem dos cálculos de uma função utilizando os parentêses para encapsular...
+
+**[CONTINUAR]**
+
+## Progressão Aritmética
 
 Definição: P.A são sequências de números, em que a diferença entre um número e seu antecedente é igual à uma razão `r`. Elas podem ser crescentes ou decrescentes. Nas progressões crescentes, a razão será positiva, e nas decrescentes, será negativa.
 
@@ -610,9 +620,19 @@ Percebeu que tem o `a1` ali?
 Então na fórmula da PA ela já possui o **PRIMEIRO ELEMENTO** (a1), por isso precisamos subtrair o `n` em 1, para que o mesmo tenha o valor correto.
 
 
-## Progressões Geométricas
+## Progressão Geométrica
+
+A P.G. é quase a mesma coisa da P.A. com a diferença que agora a razão (q) é elevada ao número do elemento
+
+```
+an = a1 . q  ^ (n – 1)
+```
 
 ## Logarítmo
+
+## Produto notável
+
+## Polinômio de Newton
 
 ## Fórmula de Bhaskara
 
@@ -628,3 +648,13 @@ Dependendo do sinal de Δ, temos:
 Δ>0, então a equação tem duas raízes diferentes.
 Δ<0, então a equação não tem raízes reais.
 
+A ideia da demonstração da fórmula de Bhaskara é o completamento de quadrados. Seja:
+
+ax2+bx+c=0
+a2x2+abx+ac=0
+4a2x2+4abx+4ac=0
+4a2x2+4abx+b2+4ac=b2
+(2ax)2+2(2ax)b+b2=b2-4ac
+(2ax+b)2=b2-4ac
+
+![](http://www.infoescola.com/wp-content/plugins/latex/cache/tex_af22fa62dac786165524367882b0e80d.gif)
