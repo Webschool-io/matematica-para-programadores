@@ -472,11 +472,11 @@ raiz(2, 81)
 
 Pronto criamos um algoritmo nosso para resolver a raíz de uma forma simples
 
-## Progressões Aritméticas:
+## Progressões Aritméticas
 
 Definição: P.A são sequências de números, em que a diferença entre um número e seu antecedente é igual à uma razão `r`. Elas podem ser crescentes ou decrescentes. Nas progressões crescentes, a razão será positiva, e nas decrescentes, será negativa.
 
-O valor da razão `r` será calculado da seguinte forma:
+O valor da razão `r` é calculado da seguinte forma:
 
 r = a2 – a1 ou r = a3 – a2 ou r = a4 – a3 ou r = a5 – a4 ou r = a6 – a5, e assim por diante.
 
@@ -506,17 +506,125 @@ Vamos desenvolver um algoritmo para resolver a PA:
 a1 = 2;
 r = 3;
 n = 10;
+
 // Nossa PA começará com o número 2
 // Com uma razão igual a 3
 // Possuindo 10 termos na sequência
+
 
 an = a1 + (n – 1) . r
 an = a1 + (9) . r
 
 // Aqui resolvemos a conta entre ( ) pois tem maior precedência
-// Logo sabemos que o resultado dessa conta sempre será o tot
+// Logo sabemos que o resultado dessa conta sempre será o total - 1
 
+an = a1 + (9) . 3
+an = a1 + 27
+an = 2 + 27
+an = 29
 ```
 
+Nesse caso o décimo elemento dessa sequência é `29`, pois:
 
+```
+[2, 5, 8, 11, 14, 17, 20, 23, 26, 29]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+E se quisermos saber o terceiro número dessa sequência?
+
+```
+a1 = 2;
+r = 3;
+n = 3;
+
+a3 = a1 + (3 – 1) . r
+a3 = a1 + (2) . 3
+a3 = 2 + 6
+a3 = 8
+```
+
+Mas claro que com a fórmula é fácil né?
+
+Agora vamos criar um algoritmo para solucionar essa fórmula.
+
+```
+Recebo 3 parâmetros:
+
+- a1 (primeiro elemento)
+- r (razão)
+- n (qual elemento a ser achado)
+
+// Inicialmente resolvemos o (n – 1) e armazenamos em uma variável
+var busca = (n – 1)
+
+// Logo após calculamos o busca . r
+var busca_razao = busca * r
+
+// Agora ta suave hein!
+var elemento = a1 + busca_razao
+```
+
+Pronto!
+
+Claro que vamos criar o código em JavaScript para validar nosso algoritmo.
+
+```js
+function PA(a1, r, n) {
+  var busca = (n – 1);
+  var busca_razao = busca * r;
+  var elemento = a1 + busca_razao;
+  return elemento;
+}
+```
+
+Como podemos perceber o elemento a ser achado é a soma do primeiro elemento com a *busca* multiplicada pela razão.
+
+Você deve se perguntar: mas e essa `busca = (n – 1)`?
+
+Vamos analisar essa `busca` sem a subtração:
+
+```
+a1 = 2;
+r = 3;
+n = 3;
+
+a3 = a1 + (3) . r
+a3 = a1 + (3) . 3
+a3 = 2 + 9
+a3 = 11
+```
+
+Se analisarmos nossa sequência anterior podemos ver que o número `11` é nosso quarto elemento.
+
+Mas então o porquê temos que subtrair o `n`?
+
+Perceba como é a fórmula da PA:
+
+```
+an = a1 + (n – 1) . r
+```
+
+Percebeu que tem o `a1` ali?
+
+Então na fórmula da PA ela já possui o **PRIMEIRO ELEMENTO** (a1), por isso precisamos subtrair o `n` em 1, para que o mesmo tenha o valor correto.
+
+
+## Progressões Geométricas
+
+## Logarítmo
+
+## Fórmula de Bhaskara
+
+A fórmula de Bhaskara é principalmente usada para resolver equações quadráticas de fórmula geral ax2+bx+c=0, com coeficientes reais, com a≠0 e é dada por:
+
+![](http://www.infoescola.com/wp-content/plugins/latex/cache/tex_a5abb2d99b070c17a06232ee036054da.gif)
+
+chamamos de discriminante: Δ = b2-4ac
+
+Dependendo do sinal de Δ, temos:
+
+Δ=0, então a equação tem duas raízes iguais.
+Δ>0, então a equação tem duas raízes diferentes.
+Δ<0, então a equação não tem raízes reais.
 
