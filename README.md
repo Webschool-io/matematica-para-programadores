@@ -403,7 +403,16 @@ Mas e caso você deseje descobrir o resultado de uma raíz quadrada?
 √¯49 = x
 ```
 
-Nesse caso você precisa achar o `x` que é um número que elevado ao quadrado, resultando no `49`, para resolver essa conta vamos inverter a raíz:
+Nesse caso você precisa achar o `x` que é um número que elevado ao quadrado, resultando no `49`, para resolver essa conta vamos inverter a raíz.
+
+A operação inversa da raíz é exponenciação e ela dá-se pela seguinte fórmula:
+
+```
+indice√¯y = x
+y = x ^ indice
+```
+
+No caso da raíz quadrada o índice é `2`:
 
 ```
 49 = x ^ 2
@@ -414,6 +423,7 @@ Nesse caso você precisa achar o `x` que é um número que elevado ao quadrado, 
 Assim chegamos a conclusão que o radicando dividido pelo resultado `x` dará `x`. Com isso podemos deduzir uma fórmula de resolução de raíz quadrada:
 
 > √¯y = x
+> 
 > y/x = x
 
 
