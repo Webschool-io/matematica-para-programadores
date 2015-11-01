@@ -111,7 +111,7 @@ function dividir(x, y) {
   var total = x;
   var contador = 1;
 
-  if(y !== 0){ // não existe divisão por 0
+  if(y === 0){ // não existe divisão por 0 portanto se for igual o retorno é falso
     if(x === y) { // um número dividido por ele mesmo é 1
       return 1;
     }
