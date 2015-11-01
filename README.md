@@ -167,7 +167,7 @@ function dividir(x, y) {
     }
     while(total > 0) {
       total = total - y;
-      contador = 1;
+      contador = contador + 1;
     }
     return contador;
   }
