@@ -264,7 +264,7 @@ A porcentagem quer saber qual a parte de um total, por exemplo:
 Sabendo disso vamos criar o algoritmo para solucionar a porcentagem, vamos dividir ele em 2 problemas:
 
 - 0% de X  = 0
-- X% de X  = X
+- 100% de X  = X
 
 ```suissagol
 Recebo 2 parâmetros:
