@@ -39,6 +39,7 @@ Básico né?
 420
 ```
 
+### Exercício
 **Vamos fazer um exercício de fixação**
 
 Dado os seguintes cálculos, vamos criar um algoritmo para resolvê-lo:
