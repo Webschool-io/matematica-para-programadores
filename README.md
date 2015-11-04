@@ -8,11 +8,11 @@ Nesse curso vamos aprender um pouco mais sobre os fundamentos da matemática, in
 
 E vou demonstrar como podemos compor essas duas para criarmos funções matemáticas mais complexas como:
 
-- mulplicação;
+- multiplicação;
 - divisão;
 - exponenciação;
 - radiciação;
-- logarítmo;
+- logaritmo;
 - etc.
 
 Além da base matemática para isso também iremos aprender e praticar muito a composição, que é uma caraterística clássica do paradigma funcional, onde compomos uma função mais complexa com outras menores.
@@ -59,7 +59,7 @@ enquanto X for maior que 0 faça
 retorna o TOTAL
 ```
 
-Bom a variáel `total` será o retorno da nossa função onde receberá a adição de um número X, por Y vezes, por exemplo: `multiplicar(2,3) == 6`. Bom então vamos criar nossa função em JavaScript:
+Bom a variável `total` será o retorno da nossa função onde receberá a adição de um número X, por Y vezes, por exemplo: `multiplicar(2,3) == 6`. Bom então vamos criar nossa função em JavaScript:
 
 ```js
 function multiplicar(x, y) {
@@ -253,12 +253,12 @@ Eu resolvo a porcentagem de uma forma um pouco diferente das ensinadas na escola
 O ensinado normalmente é algo assim:
 
 ```math
-18600 * 0.14 = 2604
+18600 * 0.16 = 2604
 ```
 
 Porém ninguém, normal, faz isso de cabeça, eu faço assim:
 
-> Quando a porcentagem é menor que 10 eu divido por 1% e multiplico o valor pela poercentagem desejada. Por exemplo: 3% de 600 é 18.
+> Quando a porcentagem é menor que 10 eu divido por 1% e multiplico o valor pela porcentagem desejada. Por exemplo: 3% de 600 é 18.
 
 ```math
 18600 * 0.01 = 186
@@ -267,7 +267,7 @@ Porém ninguém, normal, faz isso de cabeça, eu faço assim:
 
 Agora quando a **porcentagem** é maior que 10% eu faço assim:
 
-> Quando a porcentagem é maior que 10 eu divido por 10% e multiplico o valor pela poercentagem desejada. Por exemplo: 22% de 18600 é 18.
+> Quando a porcentagem é maior que 10 eu divido por 10% e multiplico o valor pela porcentagem desejada. Por exemplo: 22% de 18600 é 18.
 
 ```math
 18600 * 0.20 = 3720
