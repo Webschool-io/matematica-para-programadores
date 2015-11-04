@@ -94,6 +94,8 @@ x + y = ab
 
 Como podemos ver funcionou para outra linha, o próximo passo é você fazer o mesmo cálculo para conferir as demais linhas.
 
+ps: apenas valores positivos.
+
 **Fim do exercício**
 
 Agora o próximo passo é criarmos as funções de: multiplicação e divisão.
