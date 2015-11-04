@@ -39,7 +39,63 @@ Básico né?
 420
 ```
 
-Beleza agora o próximo passo é criarmos as funções de: multiplicação e divisão.
+**Vamos fazer um exercício de fixação**
+
+Dado os seguintes cálculos, vamos criar um algoritmo para resolvê-lo:
+
+```math
+6 + 4 = 210
+9 + 2 = 711
+8 + 5 = 313
+5 + 2 = 7
+7 + 6 = 113
+10 + 6 = 416
+15 + 3 = 1218
+```
+
+Vamos analisar a primeira linha: 
+
+
+```math
+6 + 4 = 210
+
+// Analisando
+
+6 + 4 = 10
+210 = 2 e 10
+2 = 6 - 4
+
+Logo o resultado é dado pela subtração do primeiro pelo segundo e a [concatenação](https://pt.wikipedia.org/wiki/Concatena%C3%A7%C3%A3o) da soma dos 2.
+
+x + y = 210
+
+x - y = a
+x + y = b
+
+x + y = ab
+```
+
+Criada a relação entre os termos vamos aplicar nossa função nas demais linhas:
+
+```math
+9 + 2 = 711
+
+x - y = a
+x + y = b
+
+x + y = ab
+
+9 - 2 = 7
+9 + 2 = 11
+
+9 + 2 = 711
+```
+
+Como podemos ver funcionou para outra linha, o próximo passo é você fazer o mesmo cálculo para conferir as demais linhas.
+
+**Fim do exercício**
+
+Agora o próximo passo é criarmos as funções de: multiplicação e divisão.
 
 O algoritmo para solucionarmos esse problema é o seguinte:
 
