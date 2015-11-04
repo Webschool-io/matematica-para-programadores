@@ -8,11 +8,11 @@ Nesse curso vamos aprender um pouco mais sobre os fundamentos da matemática, in
 
 E vou demonstrar como podemos compor essas duas para criarmos funções matemáticas mais complexas como:
 
-- mulplicação;
+- multiplicação;
 - divisão;
 - exponenciação;
 - radiciação;
-- logarítmo;
+- logaritmo;
 - etc.
 
 Além da base matemática para isso também iremos aprender e praticar muito a composição, que é uma caraterística clássica do paradigma funcional, onde compomos uma função mais complexa com outras menores.
@@ -59,7 +59,7 @@ enquanto X for maior que 0 faça
 retorna o TOTAL
 ```
 
-Bom a variáel `total` será o retorno da nossa função onde receberá a adição de um número X, por Y vezes, por exemplo: `multiplicar(2,3) == 6`. Bom então vamos criar nossa função em JavaScript:
+Bom a variável `total` será o retorno da nossa função onde receberá a adição de um número X, por Y vezes, por exemplo: `multiplicar(2,3) == 6`. Bom então vamos criar nossa função em JavaScript:
 
 ```js
 function multiplicar(x, y) {
@@ -258,7 +258,7 @@ O ensinado normalmente é algo assim:
 
 Porém ninguém, normal, faz isso de cabeça, eu faço assim:
 
-> Quando a porcentagem é menor que 10 eu divido por 1% e multiplico o valor pela poercentagem desejada. Por exemplo: 3% de 600 é 18.
+> Quando a porcentagem é menor que 10 eu divido por 1% e multiplico o valor pela porcentagem desejada. Por exemplo: 3% de 600 é 18.
 
 Agora vamos ver o 3% de 18.600
 
