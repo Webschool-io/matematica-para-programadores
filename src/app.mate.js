@@ -13,4 +13,4 @@ function multiplicar(x, y) {
   return total;
 }
 
-console.log('vezes: ', multiplicar(9,3));
+console.log('9 x 3 = ', multiplicar(9,3));
