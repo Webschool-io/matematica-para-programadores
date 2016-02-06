@@ -1,7 +1,7 @@
 'use strict'
 
-const somar = require('./atom_somar');
-const subtrair = require('./atom_subtrair');
+const somar = require('./atoms/atom_somar');
+const subtrair = require('./atoms/atom_subtrair');
 
 function multiplicar(x, y) {
   var total = 0;
