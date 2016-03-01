@@ -15,6 +15,8 @@ O valor dessa medida é que define o tamanho de cada parte a ser separada do nos
 - **Quartil**: irá dividir o conjunto de dados em 4 partes.
 
 
+![](./material/imgs/formula-percentil.jpg)
+
 Um "conjunto de dados" consiste apenas no grupo de números que você está estudando no momento. Exemplo: o conjunto de dados lista a quantidade de livros lidos por cada estudante ao longo do último mês. Depois de classificar os valores, ele ficará da seguinte maneira: 3, 3, 5, 6, 6, 6, 8.
 
 ![](./material/imgs/frequencia-01.jpg)
