@@ -1,6 +1,9 @@
-# distribuicao dos dados
+# Distribuicao dos dados
+
+Um "conjunto de dados" consiste apenas no grupo de números que você está estudando no momento. Exemplo: o conjunto de dados lista a quantidade de livros lidos por cada estudante ao longo do último mês. Depois de classificar os valores, ele ficará da seguinte maneira: 3, 3, 5, 6, 6, 6, 8.
 
 ![](./material/imgs/frequencia-01.jpg)
+
 Calcula a distribuicao dos dados analizados podendo ser Quartil, Decil e Percentil, sua fórmula é:
 
 ```js
