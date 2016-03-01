@@ -1,7 +1,11 @@
 # Distribuicao dos dados
 
 
-Um "conjunto de dados" consiste apenas no grupo de números que você está estudando no momento. Exemplo: o conjunto de dados lista a quantidade de livros lidos por cada estudante ao longo do último mês. Depois de classificar os valores, ele ficará da seguinte maneira: 3, 3, 5, 6, 6, 6, 8.
+Um "conjunto de dados" consiste apenas no grupo de números que você está estudando no momento. Exemplo: o conjunto de dados lista a quantidade de livros lidos por cada estudante ao longo do último mês. 
+
+Depois de classificar os valores, ele ficará da seguinte maneira: 3, 3, 5, 6, 6, 6, 8.
+
+[EXPLICAR MAIS]
 
 ## Mediana
 
