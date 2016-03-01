@@ -75,9 +75,7 @@ Logo para calcular Frequencia Acumulada Anterior basta somar o valor de sua Freq
 ![](./material/imgs/frequencia-03.jpg)
 ![](./material/imgs/frequencia-04.jpg)
 
-Depois devemos subtrair `i*(N/valor)` da Frequencia Acumulada Anterior, para isso precisamos entender de onde vem esse valor. A `Fant` está ligada à frequencia(fi) e a frequencia nos diz **quantos números existem na faixa dos valores estipulados**, exemplo:
-
-Já a `Fant` que é frequencia acumulada anterior será calculada como a soma da frequencia atual com a próxima frequencia.
+Depois devemos subtrair a Frequencia Acumulada Anterior do resultado de `i*(N/valor)`, para isso precisamos entender de onde vem esse valor.
 
 ### ((i*(N/valor)-Fant)/fmd)
 
