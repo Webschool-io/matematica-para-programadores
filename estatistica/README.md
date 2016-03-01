@@ -38,8 +38,9 @@ E sua variáveis são:
 - valor: valor de divisão podendo ser:
   - 4, 10, 100
 - Fant: frequencia acumulada anterior
+- fmd: frequencia da classe analisada
 
-**Classe** é a faixa de valores que estamos trabalhando, não temos 
+**Classe** é a faixa de valores que estamos trabalhando.
 
 Para criarmos um algoritmo para solucionar esse problema devemos iniciar pelo cálculo mais interno `(N/valor)`, então antes de tudo devemos entender o que ele faz.
 
