@@ -1,7 +1,6 @@
 # distribuicao dos dados
 
-![](./material/tabela.jpg)
-
+![](./material/imgs/frequencia-01.jpg)
 Calcula a distribuicao dos dados analizados podendo ser Quartil, Decil e Percentil, sua fórmula é:
 
 ```js
@@ -29,7 +28,11 @@ Se podemos receber os valores 4, 10 e 100 para ele então notamos que ele separa
 
 ## i*(N/valor)
 
-## (i*(N/valor)-Fant)
+## Fant - Frequencia Acumulada Anterior - (i*(N/valor)-Fant)
+
+![](./material/imgs/frequencia-02.jpg)
+![](./material/imgs/frequencia-03.jpg)
+![](./material/imgs/frequencia-04.jpg)
 
 Depois devemos subtrair desse valor a frequencia acumulada anterior, para isso precisamos entender de onde vem esse valor. A `Fant` está ligada à frequencia(fi) e a frequencia nos diz **quantos números existem na faixa dos valores estipulados**, exemplo:
 
