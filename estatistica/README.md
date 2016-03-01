@@ -21,6 +21,8 @@ A Separatriz esta ligada à mediana relativamente à sua característica de sepa
 
 Essas medidas - os quartis, os decis e os percentis - são, juntamente com a mediana, conhecidas pelo nome genérico de separatrizes.
 
+### Dados brutos
+
 Para achar, com dados brutos, a posição do elemento que irá separar o conjunto utilizamos:
 
 ```
@@ -147,29 +149,7 @@ Vamos fazer o seguinte exercício:
 
 > Calcule os quartis da série: { 1, 1, 2, 3, 5, 5, 6, 7, 9, 9, 10, 13 }
 
-O primeiro passo a ser dado é o da ordenação (crescente ou decrescente) dos valores:  { 2, 5, 6, 9, 10, 13, 15 }.
-
-O valor que divide a série acima em duas partes iguais é igual a 9, logo a Mediana é igual a 9 o que nos leva a Q2 = 9, pois Q2 será sempre a mediana já que o Quartil é divido em 4:
-
-```
-Mediana = 9
-Q2 = 9
-```
-
-Temos agora {2, 5, 6 } e {10, 13, 15 } como sendo os dois grupos de valores iguais proporcionados pela mediana ( quartil 2 ). Para o cálculo do quartil 1 e 3 basta calcular as medianas das partes iguais provenientes da verdadeira Mediana da série (quartil 2).
-
-Logo em { 2, 5, 6 } a mediana é = 5, ou seja, o Quartil 1 = Q1 = 5
-
-em {10, 13, 15 } a mediana é = 13, ou seja: será o quartil 3 = Q = 13
-
-9/4 = 2.25
-Q1 = 2.25
-Q2 = 4.5
-Q3 = 6.75
-Q4 = 9
-
-{ 2, 5, 6, 9, 10, 13, 15 } 
-
+### Dados com intervalos
 
 E para dados com intervalos:
 
