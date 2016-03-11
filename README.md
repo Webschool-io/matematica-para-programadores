@@ -100,6 +100,20 @@ ps: apenas valores positivos.
 
 Agora o próximo passo é criarmos as funções de: multiplicação e divisão.
 
+## Multiplicação
+
+O algoritmo matemático da multiplicação é simples pois utiliza apenas a soma.
+
+Vamos analisar:
+
+```
+2 x 3 = 2 + 2 + 2
+
+2 x 3 = 3 + 3
+```
+
+Com isso vemos que um número é somado por ele mesmo X vezes.
+
 O algoritmo para solucionarmos esse problema é o seguinte:
 
 ```suissagol

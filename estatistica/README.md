@@ -145,6 +145,8 @@ console.log('Elemento de Q2: ', Q2_elemento); // 9
 
 **Bem simples não?**
 
+![](https://media.giphy.com/media/YgWttApA5Uk9O/giphy.gif)
+
 Vamos fazer o seguinte exercício:
 
 > Calcule os quartis da série: { 1, 1, 2, 3, 5, 5, 6, 7, 9, 9, 10, 13 }
@@ -167,37 +169,8 @@ E sua variáveis são:
 - fmd: frequencia da classe analisada;
 - h: 
 
-Existem três tipos de medidas se separatriz:
 
-- Percentil
-- Decil
-- Quartil
-
-O valor dessa medida é que define o tamanho de cada parte a ser separada do nosso conjunto de dados.
-
-- **Percentil**: irá dividir o conjunto de dados em 100 partes.
-- **Decil**: irá dividir o conjunto de dados em 10 partes.
-- **Quartil**: irá dividir o conjunto de dados em 4 partes.
-
-Veja como é a fórmula do Percentil:
-
-![](./material/imgs/formula-percentil.jpg)
-
-A partir da fórmula acima você consegue deduzir as fórmulas do Decil e Quartil?
-
-![](https://media.giphy.com/media/YgWttApA5Uk9O/giphy.gif)
-
-Bom é **BEM LÓGICO** não?
-
-Se o Percentil divide o conjunto em 100, o Decil em 10 e o Quartil em 4, basta trocar o `100` por `10` ou `4` respectivamente.
-
-Para criarmos um algoritmo para solucionar esse problema devemos iniciar pelo cálculo mais interno `(N/valor)`, então antes de tudo devemos entender o que ele faz.
-
-Vamos trabalhar com faixas de valores, como na tabela abaixo:
-
-![](./material/imgs/tabela.jpg)
-
-### Proporção - (N/valor)
+#### Proporção - (N/valor)
 
 Se podemos receber os valores 4, 10 e 100 para ele então notamos que ele separa nossos valores em partes, criando uma proporção. Por exemplo:
 
@@ -228,7 +201,7 @@ const proporcao = (N, valor) => {
 };
 ```
 
-### Primeiro valor da proporção - i*(N/valor)
+#### Primeiro valor da proporção - i*(N/valor)
 
 Depois precisamos multiplicar nossa proporção pelo ponto da separatriz a ser analisado para achar o valor desse ponto baseado na proporção definida anteriormente.
 
@@ -257,7 +230,7 @@ const primeiroValor = (primeiro, proporcao) => {
 };
 ```
 
-### Fant - Frequencia Acumulada Anterior - (i*(N/valor)-Fant)
+#### Fant - Frequencia Acumulada Anterior - (i*(N/valor)-Fant)
 
 Depois de calcularmos a proporção correta precisamos subitrair desse valor a Frequencia Acumulada Anterior.
 
@@ -338,9 +311,9 @@ const subtrairFant = (primeiroValor, fant) => {
 ```
 
 
-### ((i*(N/valor)-Fant)/fmd)
+#### ((i*(N/valor)-Fant)/fmd)
 
-### ((i*(N/valor)-Fant)/fmd)*h
+#### ((i*(N/valor)-Fant)/fmd)*h
 
-### li+((i*(N/valor)-Fant)/fmd)*h
+#### li+((i*(N/valor)-Fant)/fmd)*h
 
