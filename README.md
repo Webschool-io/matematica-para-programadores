@@ -300,7 +300,7 @@ function porcentagem(x, y) {
   if(y === 0) {
     return 0;
   }
-  if(x === x) {
+  if(x === y) {
     return 1;
   }
   return false;
