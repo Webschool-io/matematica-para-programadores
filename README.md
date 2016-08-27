@@ -126,7 +126,7 @@ inicio o TOTAL da multiplicação com 0
 inicio o CONTADOR da multiplicação com 0
 
 enquanto X for maior que 0 faça
-  TOTAL recebe o a soma de TOTAL e Y
+  TOTAL recebe a soma de TOTAL e Y
   X recebe a subtração de X e 1
 
 retorna o TOTAL
