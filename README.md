@@ -360,6 +360,38 @@ Explicando o algoritmo:
 3. Pegamos o resultado da unidade para multiplicar por 2, que é o 2% = 372
 4. Para finalmente somar o 20% com o 2% = 4092
 
+Exemplo em JavaScript:
+
+```js
+// porcentagem(100, 25)
+const porcentagem = (x, y) => {
+  const ehDezena = (y >= 10)
+  if(ehDezena) {
+    // acho a dezena que é o INTEIRO de 25/10 = 2
+    let dezena = parseInt(y/10)
+    // acho a unidade q é 25-20 = 5
+    let unidade = y - dezena*10
+    // acho o 10% de x = 10
+    let dezenaPorcento = x * 0.1
+    // multiplico o 10% pela dezena que é 10 * 2
+    let dezenaTotal = dezenaPorcento * dezena
+    // acho o 1% de x 
+    let unidadePorcento = x * 0.01
+    // multiplico o 1% pela unidade que é 1 * 5
+    let unidadeTotal = unidadePorcento * unidade
+    // Depois apenas somamos os 2
+    return dezenaTotal + unidadeTotal
+  }
+  else { 
+    //mesma coisa aqui porém APENAS qnd é menor que 10%
+    let unidade = y
+    let unidadePorcento = x * 0.01
+    let unidadeTotal = unidadePorcento * unidade
+    return unidadeTotal
+  }
+}
+```
+
 ## Exponenciação
 
 A **exponenciação** também conhecida por potência, dá-se por qual cálculo?
