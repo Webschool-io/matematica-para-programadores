@@ -19,7 +19,6 @@ const valuesL = {
 const r = (v) => {
   if(v.secondLine[0] === 'x') return (v.secondLine[1]*v.firstLine[0])/v.firstLine[1]
   else return (v.secondLine[0]*v.firstLine[1])/v.firstLine[0]
-  // return v
 }
 
 console.log('r:', r(valuesR))
