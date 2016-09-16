@@ -14,5 +14,3 @@ const test = (arr) => {
 
 module.exports = test
 
-// console.log('testa', test([20, 21]))
-

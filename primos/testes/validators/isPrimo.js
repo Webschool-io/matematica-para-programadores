@@ -19,6 +19,7 @@ module.exports = (x) => {
   const isDivisor = (x, y) => !(x % y)
   const isMenorQueCincoEDiferenteDeQuatro = (x) => (x <= 5 && x !== 4)
   const isRaizInteira = (x) => isInt(Math.sqrt(x))
+  const pegaRaizQuadrada = (x) => Math.sqrt(x)
   const pegaMetadeImpar = (x) => {
     const metade = parseInt(x/2)
     return (metade%2) ? metade : metade-1
