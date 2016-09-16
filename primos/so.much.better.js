@@ -23,7 +23,7 @@ const testNumbers = (x) => {
   const limit = 5
   for (let i = num, count=1; i>=limit; i-=2, count++) {
     // console.log('i', i)
-    // console.log('count', count)
+    console.log('count', count)
     if(isDivisor(x, i)) {
       console.log('é divisível por: ', i)
       return false
@@ -35,8 +35,10 @@ const testNumbers = (x) => {
 
 // console.log('vaii', testNumbers(19))
 // console.log('996', testNumbers(996))
-console.log('997', testNumbers(997)) //995 - 494 - 248
-
+console.log('999', testNumbers(999)) //995 - 494 - 248
+// O(997) = O(n) = O(n-2) 995
+// O(997) = O(n) = O(n/2) 494
+// O(997) = O(n) = O(n/4) 248
 
 // console.log('par', testNumbers(18))
 
