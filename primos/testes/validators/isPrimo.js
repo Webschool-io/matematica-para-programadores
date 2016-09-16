@@ -10,38 +10,45 @@ const primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 
 6. testa divisão de x-x/2 até o 5
 */
 
-// const isInt = (x) => !((x - Math.trunc(x)) > 0)
-const isInt = (x) => Number.isInteger(x)
-const isIntAndPositive = (x) => (x > 0 && Number.isInteger(x))
-const isImpar = (x) => !!(x%2)
-const isDivisor = (x, y) => !(x % y)
-const isMenorQueCincoEDiferenteDeQuatro = (x) => (x <= 5 && x !== 4)
-const isRaizInteira = (x) => isInt(Math.sqrt(x))
-const pegaMetadeImpar = (x) => {
-  const metade = parseInt(x/2)
-  return (metade%2) ? metade : metade-1
-}
+module.exports = (x) => {
 
-const testNumbers = (x) => {
-
-  const almostHalf = pegaMetadeImpar(x)
-  if(!isIntAndPositive(x)) return false
-  if(isMenorQueCincoEDiferenteDeQuatro(x)) return true
-  if(!isImpar(x)) return false
-  if(isRaizInteira(x)) {
-    console.log('Tem raiz quadrada: ', Math.sqrt(x))
-    return false
+  // const isInt = (x) => !((x - Math.trunc(x)) > 0)
+  const isInt = (x) => Number.isInteger(x)
+  const isIntAndPositive = (x) => (x > 0 && Number.isInteger(x))
+  const isImpar = (x) => !!(x%2)
+  const isDivisor = (x, y) => !(x % y)
+  const isMenorQueCincoEDiferenteDeQuatro = (x) => (x <= 5 && x !== 4)
+  const isRaizInteira = (x) => isInt(Math.sqrt(x))
+  const pegaMetadeImpar = (x) => {
+    const metade = parseInt(x/2)
+    return (metade%2) ? metade : metade-1
   }
-  const limit = 3
-  for (let i = almostHalf, count=1; i>=limit; i-=2, count++) {
-    console.log('i', i)
-    console.log('count', count)
-    if(isDivisor(x, i)) {
-      console.log('é divisível por: ', i)
+
+  const testNumbers = (x) => {
+
+    const almostHalf = pegaMetadeImpar(x)
+    if(!isIntAndPositive(x)) return false
+    if(isMenorQueCincoEDiferenteDeQuatro(x)) return true
+    if(!isImpar(x)) return false
+    if(isRaizInteira(x)) {
+      console.log('Tem raiz quadrada: ', Math.sqrt(x))
       return false
     }
+    const limit = 3
+    let count = 1
+    for (let i = almostHalf; i>=limit; i-=2, count++) {
+      // console.log('i', i)
+      // console.log('count', count)
+      if(isDivisor(x, i)) {
+        console.log('é divisível por: ', i)
+        console.log('passos necessários', count)
+        return false
+      }
+    }
+    console.log('passos necessários', count)
+    return true
   }
-  return true
+  return testNumbers(x)
 }
 
 // console.log('vaii', testNumbers(19))
@@ -53,7 +60,7 @@ const testNumbers = (x) => {
 // console.log('7', testNumbers(7))
 // console.log('11', testNumbers(11))
 // console.log('12', testNumbers(12))
-console.log('21', testNumbers(21))
+// console.log('21', testNumbers(21))
 // O(997) = O(n) = O(n-2) 995
 // O(997) = O(n) = O(n/2) 494
 // O(997) = O(n) = O(n/4) 248

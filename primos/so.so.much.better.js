@@ -29,7 +29,7 @@ const testNumbers = (x) => {
     console.log('Tem raiz quadrada: ', Math.sqrt(x))
     return false
   }
-  const limit = 5
+  const limit = 3
   for (let i = almostHalf, count=1; i>=limit; i-=2, count++) {
     console.log('i', i)
     console.log('count', count)

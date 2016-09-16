@@ -20,7 +20,7 @@ const testNumbers = (x) => {
   if(!isMaiorQueQuatro(x)) return true
   const num = x-(getHalf(x))
   // console.log('num', num)
-  const limit = 5
+  const limit = 3
   for (let i = num, count=1; i>=limit; i-=2, count++) {
     // console.log('i', i)
     // console.log('count', count)

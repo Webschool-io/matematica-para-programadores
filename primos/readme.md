@@ -71,7 +71,29 @@ Com isso já conseguimos eliminar todos os pares e os ímpares que possuem raíz
 
 > E se o número passar por todos esses testes o que devemos fazer?
 
+Devemos pegar esse número e ir testando a divisão dele pelos seus antecessores até achar ou não um número que seja divisível, ou seja, que o resultado divisão seja inteiro.
 
+Então vamos pegar o `19`:
+
+```
+19/18
+...
+19/2
+``` 
+
+> Devemos testar de `n-1` até o 2?
+
+Já lhe respondo de antemão:
+
+> Não!
+
+**Agora vamos entender o porquê!**
+
+Primeiro que nem deve-se chegar até o 2 pois já estamos garantindo que só chegará até aqui se for ímpar, **logo testar se é divisível por 2 é burrice!**
+
+Então iremos testar se o número é divisível até o 3, mas precisamos mesmo começar os testes com `n-1`?
+
+> **Lógico que não!**
 
 
 ```
