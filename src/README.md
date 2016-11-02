@@ -155,6 +155,10 @@ E para executarmos uma multiplicação precisamos fazer apenas o seguinte:
 
 Bem simples não? Agora vamos para a próxima função: divisão.
 
+## Divisão
+
+Caso você queira ler um [artigo científico, de um mestrado, gigantesco](http://docplayer.com.br/7409872-Reflexao-acerca-do-ensino-do-algoritmo-da-divisao-inteira-proposta-didatica.html) sobre isso está na mão, caso queira ir direto ao que interessa...
+
 Como a divisão é um pouco mais complexa vamos quebrar ela em dois problemas:
 
 - não existe divisão por 0;
