@@ -1,6 +1,6 @@
 # Números Primos
 
-## Algortimos
+## Algoritmos
 
 ### by Suissa
 
