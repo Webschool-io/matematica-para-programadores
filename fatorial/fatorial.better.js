@@ -3,10 +3,12 @@ module.exports = () => {
 
   const fat = (x) => {
     if(!x) return 1
-    let total = x
-    while(x > 1) {
-      total = total * (x - 1)
-      x = x - 1
+    let total = 1
+    while(x) {
+      console.log('x', x)
+      console.log('total', total)
+      total *= x
+      x -= 1
     }
     return total
   }

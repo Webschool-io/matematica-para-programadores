@@ -63,7 +63,8 @@ Então vamos pensar:
 Primeiro caso:
 
 > Quando temos dois números negativos repetimos o sinal de subtração e somamos esses dois números. 
-> 
+
+
 ```
 Exemplos:
 -12 + -8 = - (12 + 8) = - 20
