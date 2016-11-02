@@ -1,6 +1,6 @@
 # Operações básicas apenas com soma
 
-![WAT]()
+![WAT](http://vignette3.wikia.nocookie.net/meme/images/b/b6/Y_wat_2.jpg)
 
 > Sim isso é possível!
 
