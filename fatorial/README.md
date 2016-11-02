@@ -138,14 +138,11 @@ const fat = (x) => (!x)
 ```
 
 
-## Exemplo
+## Exercício
 
-```js
-const num = 5
+Agora que você já manja dos paranaues da recursividade vamos ao exercício:
 
-const simples = require('./fatorial.js')()
-const recursiva = require('./fatorial.recursiva.js')()
+> Escolha uma função matemática, que não seja fatorial, e crie a função para sua solução de forma recursiva e explique o seu caso de parada e a segunda chamada da mesma função.
 
-console.log('Fatorial simples de '+num+' é '+simples(num))
-console.log('Fatorial recursiva de '+num+' é ', recursiva(num))
-```
+
+
