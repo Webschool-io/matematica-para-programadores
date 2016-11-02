@@ -1,5 +1,7 @@
 # Matemática para programadores
 
+![](http://ahraz.me/content/images/2015/12/logo.png)
+
 Esse conteúdo tende a ensinar matemática de uma forma um pouco diferente, para que possamos compreender bem suas bases para solidificarmos bem esse conhecimento que deve(ria) ser básico para todo programador.
 
 Aqui você não terá tudo de mão beijada, mas será estimulado a descobrir por si só baseando-se nos conteúdos básicos passados.
