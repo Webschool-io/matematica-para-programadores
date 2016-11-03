@@ -16,4 +16,5 @@ Aqui você não terá tudo de mão beijada, mas será estimulado a descobrir por
   - [Simples](https://github.com/Webschool-io/matematica-para-programadores/blob/master/fatorial/fatorial.js)
   - [Recursivo](https://github.com/Webschool-io/matematica-para-programadores/blob/master/fatorial/fatorial.recursiva.js)
   - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/fatorial#exercício)
-- [Geometria - Áreas]()
+- [Geometria - Áreas](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria)
+  - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria#exercícios)
