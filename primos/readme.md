@@ -1,6 +1,14 @@
 # Números Primos
 
+> Número primo, é um número {\displaystyle p} p cujo conjunto dos divisores não inversíveis não é vazio, e todos os seus elementos são produtos de {\displaystyle p} p por números inteiros inversíveis. De acordo com esta definição, {\displaystyle 0,} 0, {\displaystyle 1} 1 e {\displaystyle -1} -1 não são números primos.
+
+> Um número inteiro primo é aquele que tem somente quatro divisores distintos, {\displaystyle p\in \mathbb {Z} :} p \in \mathbb{Z}: {\displaystyle \pm 1} \pm 1 e {\displaystyle \pm p.} \pm p. Já um número natural primo tem unicamente dois divisores naturais distintos: o número um e ele mesmo[1].
+
+*fonte: [https://pt.wikipedia.org/wiki/N%C3%BAmero_primo](https://pt.wikipedia.org/wiki/N%C3%BAmero_primo)*
+
 ## Algoritmos
+
+Nessa seção iremos deescrever alguns algoritmos para chegar na mesma solução.
 
 ### by Suissa
 
