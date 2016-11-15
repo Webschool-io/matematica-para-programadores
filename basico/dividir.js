@@ -3,7 +3,7 @@ const somar = (x,y) =>  x + y
 const subtrair = (x,y) =>  x - y 
 const f = (x) => subtrair(aumentaBase10(x), x)
 const aumentaBase10 = (x) => multiplicar(x, 10)
-const diminuiBase10 = (x) => 0.1 * subtrair(aumentaBase10(x), (f(x)))
+const diminuiBase10 = (x) => multiplicar(0.1, subtrair(aumentaBase10(x), (f(x))))
 
 
 const multiplicarDecimal = (x, y=1) => {
@@ -60,7 +60,7 @@ const dividir = (x, y, decimal=0) => {
   else return false;
 }
 
-// console.log('resultado:', dividir(1, 5))
+console.log('resultado:', dividir(1, 5))
 
-console.log('resultado:', multiplicar(0.2, 8))
+// console.log('resultado:', multiplicar(0.2, 8))
 // console.log('resultado:', dividir(2, 1))
