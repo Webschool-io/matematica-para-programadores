@@ -1,7 +1,14 @@
 const somar = require('./atoms/somar')
 const subtrair = require('./atoms/subtrair')
 const multiplicar = require('./multiplicar')
-const mudaBase = (x, base) => multiplicar(x, base)
+
+const transformaDecimal = (x) => parseFloat(
+  Number(x+'e-'+x
+                .toString()
+                .split('.')[0]
+                .length
+  )
+)
 
 // Solução da FRAN
 // const transformaDecimal = (x) => {
@@ -11,33 +18,27 @@ const mudaBase = (x, base) => multiplicar(x, base)
 //   let decimal = "0."+zeros+"1"
 //   return parseFloat(decimal)
 // }
-const transformaDecimal = (x) => {
-  if (x === 1) return 0.1
-  let tam = x.toString().split('.')[0].length
-  return parseFloat(Number(x+'e-'+tam))
-}
+
 
 const dividir = (x, y, decimal=0) => {
   let menor = false
-  if(y === 1) {
-    return x
-  }
-  if( x < y) {
+  let passos = decimal 
+  if (y === 1) return x
+  if (x < y) {
     menor = true
     x = multiplicar(x,10)
   }
-  var resto = x
-  var passos = decimal 
-  if(y){ // y !== 0 // não existe divisão por 0
-    if(x === y) return 1 // numero dividido por ele mesmo = 1
+  let resto = x
+  if (y){ // y !== 0 // não existe divisão por 0
+    if (x === y) return 1 // numero dividido por ele mesmo = 1
     while(resto > 1) {
       resto = subtrair(resto, y)
       passos = somar(passos, 1)
-      if(!resto) { // === 0
-        if(decimal || menor) return transformaDecimal(passos)
+      if (!resto) { // === 0
+        if (decimal || menor) return transformaDecimal(passos)
         return passos
       }
-      if(resto < y && resto) 
+      if (resto < y && resto) 
         return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
     }
   }
