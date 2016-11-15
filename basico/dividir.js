@@ -6,7 +6,7 @@ const aumentaBase10 = (x) => multiplicar(x, 10)
 const diminuiBase10 = (x) => 0.1 * subtrair(aumentaBase10(x), (f(x)))
 
 
-const multiplicarDecimal = (x, y) => {
+const multiplicarDecimal = (x, y=1) => {
   var total = 0;
   var contador = 0;
   while(x){
@@ -32,7 +32,7 @@ const multiplicar = (x, y) => {
   }
   return total.toFixed(2);
 }
-const dividir = (x, y, decimal) => {
+const dividir = (x, y, decimal=0) => {
   let menor = false
   if(y === 1) {
     return x
