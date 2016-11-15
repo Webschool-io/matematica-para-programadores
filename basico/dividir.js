@@ -23,26 +23,31 @@ const transformaDecimal = (x) => parseFloat(
 const dividir = (x, y, decimal=0) => {
   let menor = false
   let passos = decimal 
-  if (y){ // y !== 0 // não existe divisão por 0
-    if (y === 1) return x
-    if (x === y) return 1 // numero dividido por ele mesmo = 1
-    if (x < y) {
+  let resto = x
+  if (!y)  // y !== 0 // não existe divisão por 0
+    return Infinity
+  switch (true) {
+    case (y === 1): 
+      return x
+      break
+    case (y === x): 
+      return 1
+      break
+    case (y > x): 
       menor = true
-      x = multiplicar(x,10)
-    }
-    let resto = x
-    while(resto > 1) {
-      resto = subtrair(resto, y)
-      passos = somar(passos, 1)
-      if (!resto) { // === 0
-        if (decimal || menor) return transformaDecimal(passos)
-        return passos
+      resto = multiplicar(x,10)
+    default:
+      while(resto > 1) {
+        resto = subtrair(resto, y)
+        passos = somar(passos, 1)
+        if (!resto) { // === 0
+          if (decimal || menor) return transformaDecimal(passos)
+          return passos
+        }
+        if (resto < y && resto) 
+          return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
       }
-      if (resto < y && resto) 
-        return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
-    }
   }
-  else return false
 }
 
 console.log('4/2:', dividir(4, 2))
