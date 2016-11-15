@@ -1,27 +1,20 @@
-
 const somar = require('./atoms/somar')
 const subtrair = require('./atoms/subtrair')
 const multiplicar = require('./multiplicar')
 const mudaBase = (x, base) => multiplicar(x, base)
-const aumentaBase10 = (x) => multiplicar(x, 10)
-const diminuiBase10 = (x) => multiplicar(0.1, x)
-// const testaDecimal = (x) => {
+
+// Solução da FRAN
+// const transformaDecimal = (x) => {
 //   if (x === 1) return 0.1
 //   let tam = x.toString().split('.')[0].length - 1
 //   let zeros = Array(tam).fill(0).join(''); 
 //   let decimal = "0."+zeros+"1"
 //   return parseFloat(decimal)
 // }
-const testaDecimal = (x) => {
-  // console.log('testaDecimal x', x)
+const transformaDecimal = (x) => {
   if (x === 1) return 0.1
   let tam = x.toString().split('.')[0].length
-  // let zeros = Array(tam).fill(0).join(''); 
-  // let decimal = "0."+zeros+"1"
-  // console.log('Number(x)', Number(x))
-  let decimal = Number(x+'e-'+tam)
-  // console.log('decimal', decimal)
-  return parseFloat(decimal)
+  return parseFloat(Number(x+'e-'+tam))
 }
 
 const dividir = (x, y, decimal=0) => {
@@ -41,14 +34,7 @@ const dividir = (x, y, decimal=0) => {
       resto = subtrair(resto, y)
       passos = somar(passos, 1)
       if(!resto) { // === 0
-        if(decimal || menor) {
-          // console.log('passos if', passos)
-          // console.log('decimal', decimal)
-          let resultado = testaDecimal(passos)
-          // console.log('resultado', resultado)
-          return resultado
-          // return mudaBase(passos, casas)
-        }
+        if(decimal || menor) return transformaDecimal(passos)
         else return passos
       }
       if(resto < y && resto) 
