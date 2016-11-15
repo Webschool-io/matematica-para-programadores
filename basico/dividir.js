@@ -50,6 +50,7 @@ const dividir = (x, y, decimal=0) => {
   }
 }
 
+console.log('4/0:', dividir(4, 0))
 console.log('4/2:', dividir(4, 2))
 console.log('16/2:', dividir(16, 2))
 console.log('1/2:', dividir(1, 2))
