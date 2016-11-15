@@ -35,10 +35,10 @@ const dividir = (x, y, decimal=0) => {
       passos = somar(passos, 1)
       if(!resto) { // === 0
         if(decimal || menor) return transformaDecimal(passos)
-        else return passos
+        return passos
       }
       if(resto < y && resto) 
-        return dividir(resto*10, y, multiplicar(passos,10))
+        return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
     }
   }
   else return false
