@@ -263,6 +263,7 @@ E agora rodamos ela:
 
 Agora iremos refatorar essa função para que ela trabalhe com decimais também.
 
+Nosso maior problema será resolver o cálculo da divisão utilizando apenas soma e subtração, porém retornando o resultado com decimal. Pois nosso código anterior não faz isso.
 
 ```js
 const somar = require('./atoms/somar')
