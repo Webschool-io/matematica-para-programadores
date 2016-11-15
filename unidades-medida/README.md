@@ -4,8 +4,10 @@ Um dos conteúdos mais básicos que encontramos nos nossos estudos é a convers�
 
 Como um bom programador isso nunca deverá ser problema para nós pois é apenas uma regrinha de três.
 
-
 ![unidades de medida](http://i.imgur.com/0sZd2iX.png)
+*fonte: [https://en.wikipedia.org/wiki/Gas_constant](https://en.wikipedia.org/wiki/Gas_constant)*
+
+## Exercício
 
 Dada a imagem acima correlacione a unidade `erg` com o `J`, então responda a pergunta:
 
