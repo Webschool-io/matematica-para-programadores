@@ -4,6 +4,14 @@
 
 > Sim isso é possível!
 
+> **E é assim que as coisas funcionam dentro do seu processador!**
+
+**O responsável por isso é a unidade lógica e aritmética (ULA) é um circuito digital que realiza operações lógicas e aritméticas.**
+
+> Os sistemas numéricos de complemento para um e complemento para dois permitem que a subtração seja realizada pela adição do minuendo com o complemento do subtraendo, simplificando o circuito lógico. Uma vantagem do complemento para dois em relação aos outros sistemas é que a representação possui apenas um zero, não possuindo um "zero negativo".
+
+*fonte: [https://pt.wikipedia.org/wiki/Unidade_l%C3%B3gica_e_aritm%C3%A9tica](https://pt.wikipedia.org/wiki/Unidade_l%C3%B3gica_e_aritm%C3%A9tica)*
+
 EM outro material eu já mostrei que podemos utilizar apenas soma e subtração, então agora irei mostrar como fazer subtração usando a soma!
 
 Vamos revisar o que é a soma:
@@ -42,6 +50,8 @@ Tudo bem isso é fácil, agora como podemos fazer o seguinte apenas com soma?
 > Dica matadora essa né?
 
 Você pode usar número negativo pois seu sinal é [representado por 64 bits, sendo apenas 1 para seu sinal](http://www.2ality.com/2012/04/number-encoding.html).
+
+![](http://i.imgur.com/lXqXj6A.png)
 
 Então vamos pensar:
 
