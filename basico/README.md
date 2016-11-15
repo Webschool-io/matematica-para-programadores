@@ -259,6 +259,57 @@ E agora rodamos ela:
 420
 ```
 
+## Divisão com decimal
+
+Agora iremos refatorar essa função para que ela trabalhe com decimais também.
+
+
+```js
+const somar = require('./atoms/somar')
+const subtrair = require('./atoms/subtrair')
+const multiplicar = require('./multiplicar')
+
+const transformaDecimal = (x) => parseFloat(
+  Number(x+'e-'+x
+                .toString()
+                .split('.')[0]
+                .length
+  )
+)
+
+const dividir = (x, y, decimal=0) => {
+  let menor = false
+  let passos = decimal 
+  if (y === 1) return x
+  if (x < y) {
+    menor = true
+    x = multiplicar(x,10)
+  }
+  let resto = x
+  if (y){ // y !== 0 // não existe divisão por 0
+    if (x === y) return 1 // numero dividido por ele mesmo = 1
+    while(resto > 1) {
+      resto = subtrair(resto, y)
+      passos = somar(passos, 1)
+      if (!resto) { // === 0
+        if (decimal || menor) return transformaDecimal(passos)
+        return passos
+      }
+      if (resto < y && resto) 
+        return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
+    }
+  }
+  else return false
+}
+
+console.log('4/2:', dividir(4, 2))
+console.log('16/2:', dividir(16, 2))
+console.log('1/2:', dividir(1, 2))
+console.log('1/4:', dividir(1, 4))
+console.log('1/8:', dividir(1, 8))
+
+```
+
 ### Exercício
 
 **Refatore a divisão para utilizar as funções de somar subtrair, criadas anteriormente.**
