@@ -23,14 +23,14 @@ const transformaDecimal = (x) => parseFloat(
 const dividir = (x, y, decimal=0) => {
   let menor = false
   let passos = decimal 
-  if (y === 1) return x
-  if (x < y) {
-    menor = true
-    x = multiplicar(x,10)
-  }
-  let resto = x
   if (y){ // y !== 0 // não existe divisão por 0
+    if (y === 1) return x
     if (x === y) return 1 // numero dividido por ele mesmo = 1
+    if (x < y) {
+      menor = true
+      x = multiplicar(x,10)
+    }
+    let resto = x
     while(resto > 1) {
       resto = subtrair(resto, y)
       passos = somar(passos, 1)
