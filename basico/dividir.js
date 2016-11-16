@@ -19,14 +19,13 @@ const transformaDecimal = (x) => parseFloat(
 //   return parseFloat(decimal)
 // }
 
-
 const dividir = (x, y, decimal=0) => {
   let menor = false
   let passos = decimal 
   let resto = x
-  if (!y)  // y !== 0 // não existe divisão por 0
+  if (!y) 
     return Infinity
-  switch (true) {
+  switch (true) { 
     case (y === 1): 
       return x
       break
@@ -40,12 +39,12 @@ const dividir = (x, y, decimal=0) => {
       while(resto > 1) {
         resto = subtrair(resto, y)
         passos = somar(passos, 1)
+        if (resto < y && resto) 
+          return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
         if (!resto) { // === 0
           if (decimal || menor) return transformaDecimal(passos)
           return passos
         }
-        if (resto < y && resto) 
-          return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
       }
   }
 }
