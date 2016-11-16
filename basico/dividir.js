@@ -27,11 +27,9 @@ const dividir = (x, y, decimal=0) => {
   if (!y)  // y !== 0 // não existe divisão por 0
     return Infinity
   switch (true) {
-    case (y === 1): 
-      return x
+    case (y === 1): return x
       break
-    case (y === x): 
-      return 1
+    case (y === x): return 1
       break
     case (y > x): 
       menor = true
