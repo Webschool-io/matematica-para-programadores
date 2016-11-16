@@ -10,3 +10,5 @@ Neste caso, a série acima é dita ser a série de Taylor de `f(x)` em torno do 
 Associadamente, o polinômio de Taylor de ordem `n` em torno de `x=a` de uma dada função n-vezes diferenciável neste ponto é dado por:
 
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/65dc6a32cf1e7ce4b79dd23e4006a77de4a1cc0c)
+
+No caso particular de `a=0`, série acima também é chamada de [Série de Maclaurin](https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Maclaurin) ou, quando for o caso, de polinômio de Maclaurin.
