@@ -1,27 +1,11 @@
 'use strict'
 
-const somar = (x,y) =>  x + y 
-const subtrair = (x,y) =>  x - y 
-const f = (x) => subtrair(aumentaBase10(x), x)
-const aumentaBase10 = (x) => multiplicar(x, 10)
-const diminuiBase10 = (x) => 0.1 * subtrair(aumentaBase10(x), (f(x)))
+const somar = require('./atoms/somar.js')
+const subtrair = require('./atoms/subtrair.js') 
 
 const inverteXeY = (x, y) => [y, x]
 
-const multiplicar = (x, y) => {
-  var total = 0;
-  var contador = 0;
-  let c = 0
-  if(x < 1) {
-    x = inverteXeY(x, y)[0]
-    y = inverteXeY(x, y)[1]
-  }
-  while(x){
-    total = somar(total, y)
-    x = subtrair(x,1);
-  }
-  return total.toFixed(2);
-}
+const multiplicar = require('./multiplicar.js')
 
 const dividir = (x, y, decimal) => {
   let menor = false

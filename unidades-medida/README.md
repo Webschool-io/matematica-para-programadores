@@ -13,8 +13,10 @@ Dada a imagem acima correlacione a unidade `erg` com o `J`, então responda a pe
 
 > Precisamos de quantos Joules para ter a mesma quantidade de ` 200 erg`s?
 
+**Nesse exercício você não precisa implementar a função, apenas demonstar seu cálculo.**
+
 ```
 8.3144598(48)   J K−1 mol−1
 8314.4598(48)   J K−1 kmol−1
-8.3144598(48)×107   erg K−1 mol−1
+8.3144598(48)×10^7   erg K−1 mol−1
 ```

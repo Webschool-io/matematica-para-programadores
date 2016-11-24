@@ -25,12 +25,10 @@ const dividir = (x, y, decimal=0) => {
   let resto = x
   if (!y) 
     return Infinity
-  switch (true) { 
-    case (y === 1): 
-      return x
+  switch (true) {
+    case (y === 1): return x]
       break
-    case (y === x): 
-      return 1
+    case (y === x): return 1
       break
     case (y > x): 
       menor = true
