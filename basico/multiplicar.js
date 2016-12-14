@@ -1,28 +1,19 @@
-const somar = require('./atoms/somar')
-const subtrair = require('./atoms/subtrair')
+const somar = require('./atoms/atom_somar')
 
-module.exports = (x, y) => {
-  let total = 0
-  let contador = 0
-  let c = 0
-  if (x < 1 && x > 0) {
-    c = x 
-    x = y 
-    y = c
+const multiplicadorMaior = (coeficiente, multiplicador) => coeficiente < multiplicador ? true : false;
+
+//Lembra da frase "a soma dos fatores não alteram o produto", então caso o multiplicador seja maior eu irei trocar pera operando, assim gerando um array menor para o calculo.
+const otimizador = (coeficiente, multiplicador) => multiplicadorMaior(coeficiente, multiplicador) ? recursive(multiplicador, coeficiente) : recursive(coeficiente, multiplicador)
+
+const recursive = (coeficiente, multiplicador, arr = [], multiplicadorAtual = 0) => {
+  if(multiplicadorAtual >= multiplicador) {
+    return somar(...arr);
   }
-  // if (y < 1 && y > 0) {
-  //   let tam = y.toString().split('.')[1].length
-  //   let zeros = Array(tam).fill(0).join(''); 
-  //   let decimal = "1"+zeros+"1"
-  //   return 
-  // }
-  // console.log('MULTIII x', x)
-  // console.log('MULTIII y', y)
-  while(x){
-    total = somar(total, y)
-    x = subtrair(x,1)
-  }
-  // console.log('MULTIII x', x)
-  // console.log('MULTIII total', total)
-  return total.toFixed(5)
+  arr.push(coeficiente);
+  multiplicadorAtual = somar(multiplicadorAtual, 1);
+  return recursive(coeficiente, multiplicador, arr, multiplicadorAtual);
 }
+
+const multiplicador = (coeficiente, multiplicador) => otimizador(coeficiente, multiplicador);
+
+module.exports = multiplicador;
