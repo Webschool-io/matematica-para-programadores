@@ -5,7 +5,7 @@ const somar = require('./atoms/atom_somar')
 // então caso o multiplicador seja maior eu irei trocar pelo operando,
 // assim gerando um array menor para o calculo.
 
-const multiplicadorMaior = (coeficiente, multiplicador) => coeficiente < multiplicador ? true : false;
+const multiplicadorMaior = (coeficiente, multiplicador) => coeficiente < multiplicador
 
 const contemDecimal = (coeficiente, multiplicador) => parseInt(coeficiente) != parseFloat(coeficiente) 
                                                       || parseInt(multiplicador) != parseFloat(multiplicador);
