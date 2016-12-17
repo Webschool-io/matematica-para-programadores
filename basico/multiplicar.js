@@ -1,28 +1,47 @@
-const somar = require('./atoms/somar')
-const subtrair = require('./atoms/subtrair')
+const somar = require('./atoms/atom_somar')
 
-module.exports = (x, y) => {
-  let total = 0
-  let contador = 0
-  let c = 0
-  if (x < 1 && x > 0) {
-    c = x 
-    x = y 
-    y = c
-  }
-  // if (y < 1 && y > 0) {
-  //   let tam = y.toString().split('.')[1].length
-  //   let zeros = Array(tam).fill(0).join(''); 
-  //   let decimal = "1"+zeros+"1"
-  //   return 
-  // }
-  // console.log('MULTIII x', x)
-  // console.log('MULTIII y', y)
-  while(x){
-    total = somar(total, y)
-    x = subtrair(x,1)
-  }
-  // console.log('MULTIII x', x)
-  // console.log('MULTIII total', total)
-  return total.toFixed(5)
+
+//Lembra da frase "a soma dos fatores não altera o produto",
+// então caso o multiplicador seja maior eu irei trocar pelo operando,
+// assim gerando um array menor para o calculo.
+
+const multiplicadorMaior = (coeficiente, multiplicador) => coeficiente < multiplicador
+
+const contemDecimal = (coeficiente, multiplicador) => parseInt(coeficiente) != parseFloat(coeficiente) 
+                                                      || parseInt(multiplicador) != parseFloat(multiplicador);
+
+const podeMultiplicar = (coeficiente, multiplicador) => contemDecimal(coeficiente, multiplicador)
+                                                      ? comDecimal(coeficiente, multiplicador)
+                                                      : semDecimal(coeficiente, multiplicador)
+
+const removeDecimal = (num) => parseInt(String(num).replace('.', ''));
+
+const casasDecimais = (num) => /\.(\w+)/.exec(num) !== null ? /\.(\w+)/.exec(num)[1] : null
+
+const somaDecimais = (coeficiente, multiplicador) => {
+  if(casasDecimais(coeficiente) == null)  { return parseInt(String(casasDecimais(multiplicador).length)) }
+  else if(casasDecimais(multiplicador) == null) { return parseInt(String(casasDecimais(coeficiente).length)) }
+
+  return somar(parseInt(String(casasDecimais(coeficiente).length)), parseInt(String(casasDecimais(multiplicador).length)));
 }
+
+const comDecimal = (coeficiente, multiplicador) => semDecimal(removeDecimal(coeficiente), removeDecimal(multiplicador), somaDecimais(coeficiente, multiplicador));
+
+const semDecimal = (coeficiente, multiplicador, casasDecimais = 0) => multiplicadorMaior(coeficiente, multiplicador) 
+                                                  ? recursive(multiplicador, coeficiente, [], 0, casasDecimais) 
+                                                  : recursive(coeficiente, multiplicador, [], 0, casasDecimais)
+
+const recursive = (coeficiente, multiplicador, arr = [], multiplicadorAtual = 0, casasDecimais) => {
+  if(multiplicadorAtual >= multiplicador) {
+    const result = somar(...arr);
+    if(casasDecimais !== 0) return result/(10*casasDecimais)
+    return result;
+  }
+  arr.push(coeficiente);
+  multiplicadorAtual = somar(multiplicadorAtual, 1);
+  return recursive(coeficiente, multiplicador, arr, multiplicadorAtual, casasDecimais);
+}
+
+const multiplicador = (coeficiente, multiplicador) => podeMultiplicar(coeficiente, multiplicador);
+
+module.exports = multiplicador;
