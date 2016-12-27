@@ -136,13 +136,12 @@ Bom a variável `total` será o retorno da nossa função onde receberá a adiç
 
 ```js
 function multiplicar(x, y) {
-  var total = 0;
-  var contador = 0;
-  while(x){
-    total = somar(total, y)
-    x = subtrair(x,1);
-  }
-  return total;
+	var total = 0;
+	while (x) {
+		total = somar(total, y);
+		x = subtrair(x, 1);
+	}
+	return total;
 }
 ```
 
@@ -497,13 +496,13 @@ Agora vamos transformar em JavaScript:
 
 ```js
 function exponenciar(x, y) {
-  var total = x;
-  var contador = x;
-  while(contador){
-    total = multiplicar(total, x);
-    contador = subtrair(contador,1);
-  }
-  return total;
+	var total = 1;
+	var contador = y;
+	while (contador) {
+		total = multiplicar(total, x);
+		contador = subtrair(contador, 1);
+	}
+	return total;
 }
 ```
 
