@@ -18,3 +18,4 @@ Aqui você não terá tudo de mão beijada, mas será estimulado a descobrir por
   - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/fatorial#exercício)
 - [Geometria - Áreas](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria)
   - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria#exercícios)
+- [Regra de 3 - método Suissa](https://github.com/Webschool-io/matematica-para-programadores/tree/master/regraDe3) 
