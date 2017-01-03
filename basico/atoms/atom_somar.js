@@ -1,8 +1,7 @@
-module.exports = function () {
-  var total = 0;
-  var valores = Array.apply(null, arguments);
-  valores.forEach(function(elem){ 
-    total = total + elem
-  });
-  return total;
-}
+//Agora lida com multi parametros de forma mais simples
+//Funcional <3
+//const reduce = (array) => array.reduce((total, element) => total += element, 0)
+//const soma = (...args) => reduce(args);
+const soma = (...args) => args.reduce((total, numero) => total += numero, 0)
+
+module.exports = soma;
