@@ -31,10 +31,17 @@ const semDecimal = (coeficiente, multiplicador, casasDecimais = 0) => multiplica
                                                   ? recursive(multiplicador, coeficiente, [], 0, casasDecimais) 
                                                   : recursive(coeficiente, multiplicador, [], 0, casasDecimais)
 
+const acrescentarDecimal = (numero, casasDecimais) => {
+  const length = Number(String(numero).length)
+  const inteiros = String(numero).substring(0, somar(length, -casasDecimais)) + '.';
+  const decimais = String(numero).substring((casasDecimais - 1)); // -1 porque começa com no 0
+  return Number([].concat(inteiros, decimais).join(''))
+}
+
 const recursive = (coeficiente, multiplicador, arr = [], multiplicadorAtual = 0, casasDecimais) => {
   if(multiplicadorAtual >= multiplicador) {
     const result = somar(...arr);
-    if(casasDecimais !== 0) return result/(10*casasDecimais)
+    if(casasDecimais !== 0) return acrescentarDecimal(result, casasDecimais)
     return result;
   }
   arr.push(coeficiente);
