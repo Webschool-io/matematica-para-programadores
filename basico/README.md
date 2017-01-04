@@ -54,7 +54,7 @@ Dado os seguintes cálculos, vamos criar um algoritmo para resolvê-lo:
 15 + 3 = 1218
 ```
 
-Vamos analisar a primeira linha: 
+Vamos analisar a primeira linha:
 
 
 ```math
@@ -117,7 +117,7 @@ Com isso vemos que um número é somado por ele mesmo X vezes.
 O algoritmo para solucionarmos esse problema é o seguinte:
 
 ```suissagol
-Recebo 2 parâmetros: 
+Recebo 2 parâmetros:
 
 - X
 - Y
@@ -136,13 +136,12 @@ Bom a variável `total` será o retorno da nossa função onde receberá a adiç
 
 ```js
 function multiplicar(x, y) {
-  var total = 0;
-  var contador = 0;
-  while(x){
-    total = somar(total, y)
-    x = subtrair(x,1);
-  }
-  return total;
+	var total = 0;
+	while (x) {
+		total = somar(total, y);
+		x = subtrair(x, 1);
+	}
+	return total;
 }
 ```
 
@@ -280,7 +279,7 @@ const transformaDecimal = (x) => parseFloat(
 
 const dividir = (x, y, decimal=0) => {
   let menor = false
-  let passos = decimal 
+  let passos = decimal
   if (y === 1) return x
   if (x < y) {
     menor = true
@@ -296,7 +295,7 @@ const dividir = (x, y, decimal=0) => {
         if (decimal || menor) return transformaDecimal(passos)
         return passos
       }
-      if (resto < y && resto) 
+      if (resto < y && resto)
         return dividir(multiplicar(resto,10), y, multiplicar(passos,10))
     }
   }
@@ -322,13 +321,13 @@ Agora após finalizarmos essas operações básicas podemos agora resolver funç
 A porcentagem quer saber qual a parte de um total, por exemplo:
 
 > 1% 777 é 7
-> 
+>
 > 5% de 100 é 5
-> 
+>
 > 10% de 700 é 70
-> 
+>
 > 50% de 840 é 420
-> 
+>
 > 100% de 666 é 666
 
 Sabendo disso vamos criar o algoritmo para solucionar a porcentagem, vamos dividir ele em 2 problemas:
@@ -431,14 +430,14 @@ const porcentagem = (x, y) => {
     let dezenaPorcento = x * 0.1
     // multiplico o 10% pela dezena que é 10 * 2
     let dezenaTotal = dezenaPorcento * dezena
-    // acho o 1% de x 
+    // acho o 1% de x
     let unidadePorcento = x * 0.01
     // multiplico o 1% pela unidade que é 1 * 5
     let unidadeTotal = unidadePorcento * unidade
     // Depois apenas somamos os 2
     return dezenaTotal + unidadeTotal
   }
-  else { 
+  else {
     //mesma coisa aqui porém APENAS qnd é menor que 10%
     let unidade = y
     let unidadePorcento = x * 0.01
@@ -497,13 +496,13 @@ Agora vamos transformar em JavaScript:
 
 ```js
 function exponenciar(x, y) {
-  var total = x;
-  var contador = x;
-  while(contador){
-    total = multiplicar(total, x);
-    contador = subtrair(contador,1);
-  }
-  return total;
+	var total = 1;
+	var contador = y;
+	while (contador) {
+		total = multiplicar(total, x);
+		contador = subtrair(contador, 1);
+	}
+	return total;
 }
 ```
 
@@ -528,7 +527,7 @@ Então o inverso dessa potência é:
 
 Nesse caso dividimos o `81` por `3` até o resultado ser `1`, nesse caso dividimos o `81` que é a base por `3` que o ?????? até não podermos mais dividí-lo, nesse caso o resultado é 4 pois foi o número de passos necessários até reduzirmos o `81` para `1`.
 
-## Radiciação 
+## Radiciação
 
 > Uma raiz quadrada de um número x é um número que, quando multiplicado por si próprio, iguala x.[1] Por exemplo, 4 e -4 são raízes quadradas de 16, pois 4^2 = (-4)^2 = 16.
 
@@ -584,7 +583,7 @@ No caso da raíz quadrada o índice é `2`:
 Assim chegamos a conclusão que o radicando dividido pelo resultado `x` dará `x`. Com isso podemos deduzir uma fórmula de resolução de raíz quadrada:
 
 > √¯y = x
-> 
+>
 > y/x = x
 
 
@@ -592,7 +591,7 @@ Dessa forma fica simples para você testar os números até encontrar seu result
 
 > Pois qualquer número ímpar dividido por um número par sempre terá resto.
 
-E como estamos procurando um valor que multiplicado por ele mesmo dará `49`, deduzimos que o `x` **PRECISA** ser um divisor de 49. Nesse caso 
+E como estamos procurando um valor que multiplicado por ele mesmo dará `49`, deduzimos que o `x` **PRECISA** ser um divisor de 49. Nesse caso
 
 ```
 49/x = x
