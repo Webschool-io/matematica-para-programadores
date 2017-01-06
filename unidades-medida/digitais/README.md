@@ -14,7 +14,7 @@ const decToBin = (dec) =>
       ? (t[t.length-1] = t[t.length-1]%cur) ? '1' : '1' : '0' , '')
 ```
 
-E assim facilita?
+> E assim facilita?
 
 ```js
 const immutablePush = (arr, newEntry) => [ ...arr, newEntry ] 
@@ -35,6 +35,32 @@ const decToBinReduce = (dec) =>
 console.log('12: ', decToBinReduce(12))
 console.log('35: ', decToBinReduce(35))
 ```
+
+> **Meio estranha, não?** Vou facilitar um pouco.
+> 
+> Por que criar esse *Array*?
+
+```js
+const arrayBin = Array.from({length: 8}, (k, i) => Math.pow(2, i) ).reverse()
+// [ 128, 64, 32, 16, 8, 4, 2, 1 ]
+```
+
+Pois ele faz parte do método dessa solução, vamos pegar o valor 12 (00001100) :
+
+```js
+const arrayBin = Array.from({length: 8}, (k, i) => Math.pow(2, i) ).reverse()
+// [ 128, 64, 32, 16, 8, 4, 2, 1 ]
+// 12 = [0, 0, 0, 0, 
+//                  12/8 >= 1 ? 1 :0 
+//                    1 ? 12 = 12%8 = 4
+// 4 = [0, 0, 0, 0, 1, 
+//                  4/4 >= 1 ? 1 :0 
+//                    1 ? 4 = 4%4 = 0
+// 0 = [0, 0, 0, 0, 1, 1, 0, 0]
+
+        
+```
+
 
 ## Exercício
 
