@@ -17,7 +17,7 @@ const variancia = (lista) => {
   let tamanho = lista.length
   let media = m.calcular(lista)
   let diferencaMedia = diferenca(lista, media)
-  let result = diferencaMedia.reduce(somatorio)/tamanho
+  let result = diferencaMedia.reduce(somatorio)/tamanho - 1
   return result
 }
 
