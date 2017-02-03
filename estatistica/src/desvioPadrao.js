@@ -1,22 +1,10 @@
-const arr = [2,5,3,2]
-const produtoNotavel = require('./produtoNotavel')
-const media = require('./media')
-// console.log('media', media)
-const raizQuadrada = (valor) => Math.sqrt(valor)
+const arr1 = [5,3,7]
+const arr2 = [5,5,3,3,7]
+const variancia = require('./variancia')
 
-const desvioPadrao = (amostra) => {
-  const m = media.calcular(amostra)
-  const somatorio = (acc, cur) => {
-    let produto = produtoNotavel.menos(acc, m)
-    console.log('produto', produto)
-    acc += produto
-    return acc
-  }
-  const raizDentro = amostra.reduce(somatorio)
-  const raizDividida = raizDentro / amostra.length
-  return raizQuadrada(raizDividida)
-}
+const desvio = (arr, tipo) => Math.sqrt(variancia(arr, tipo))
 
-console.log(desvioPadrao(arr))
+console.log('desvio padrão sob amostra: ', desvio(arr1, 'amostra'))
+console.log('desvio padrão sob população: ', desvio(arr2, 'população'))
 
-// module.exports = (arr) => arr.reduce(media)
+module.exports = (arr, tipo) => desvio(arr, tipo)
