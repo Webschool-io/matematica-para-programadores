@@ -1,8 +1,8 @@
-const arr = [2,3,3,2,67,59]
+const somatorio = require('./somatorio.js')
 
-const media = (a,b,i,arr) => (i<arr.length-1) ? a+b : a/arr.length
-const calcular = (arr) => arr.reduce(media)
+// media = Soma de itens/numero de itens
 
-module.exports = ({
-  calcular
-})
+const numeroDeItens = (arr) => arr.length
+const media = (arr) => arr.reduce(somatorio) / numeroDeItens(arr)
+
+module.exports = media
