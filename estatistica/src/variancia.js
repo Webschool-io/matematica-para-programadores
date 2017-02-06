@@ -34,7 +34,7 @@ const variancia = (lista, tipo) => {
   let media = m(lista)
   let diferencaMedia = diferenca(lista, media)
   let diferencaMediaQuadrado = diferencaMedia.map(quadrado)
-  let result = diferencaMedia.reduce(somatorio)/n
+  let result = diferencaMediaQuadrado.reduce(somatorio)/n
   return result
 }
 
