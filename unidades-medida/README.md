@@ -84,3 +84,24 @@ Exemplo:
 unities['c']['f'](100)
 
 ```
+
+### Exercício
+
+Crie uma estrutura separada onde você deverá definir as *propriedades* dessa unidade, por exemplo:
+
+```
+unity: m
+name: metro
+relations: 
+  km: 1000
+  hm: 100
+  dam: 10
+  dem: 0.1
+  cm: 0.01
+  mm: 0.001
+
+```
+
+Utilize como base **APENAS** as unidades do [SI](https://pt.wikipedia.org/wiki/Sistema_Internacional_de_Unidades)!
+
+> Espero que tenha ficado clara a proposta.
