@@ -58,18 +58,29 @@ Agora veja como ficou fácil criar um Conversor Universal para unidades de medid
 
 const unities = require('./unities.js')
 
-
 const converter = (val, base, to) => unities[base][to](val)
-
-console.log('converter 0c => K', converter(0, 'c', 'K'))
-console.log('converter 20c => K', converter(20, 'c', 'K'))
-console.log('converter 100c => K', converter(100, 'c', 'K'))
-
-
-console.log('\n\n\nconverter 0c => f', converter(0, 'c', 'f'))
-console.log('converter 20c => f', converter(20, 'c', 'f'))
-console.log('converter 100c => f', converter(100, 'c', 'f'))
-
 
 ```
 
+> **Por que esse conversor é universal tio Suissa?**
+
+> - Porque eu sou muito malandro! LOL
+
+
+Brincadeiras a parte, essa generalização da conversão de qualquer unidade de medida 
+deve-se à função cadastrada no Objeto de Unidades `unities.js`.
+
+Exemplo:
+
+```js
+
+'c': {
+  'name': 'Celsius',
+  'f': (val) => (val * 1.8  + 32),
+  'k': (val) => (val + 273.15)
+}
+
+// chamando a função para converter ela pegará o Objeto assim
+unities['c']['f'](100)
+
+```
