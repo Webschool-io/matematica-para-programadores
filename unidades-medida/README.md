@@ -87,7 +87,8 @@ unities['c']['f'](100)
 
 ### Exercício
 
-Crie uma estrutura separada onde você deverá definir as *propriedades* dessa unidade, por exemplo:
+Crie uma estrutura separada onde você deverá definir as *propriedades* de uma 
+unidade à sua escolha, por exemplo o metro:
 
 ```
 unity: m
