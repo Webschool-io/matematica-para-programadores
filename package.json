@@ -1,0 +1,28 @@
+{
+  "name": "matematica-para-programadores",
+  "version": "1.0.0",
+  "description": "Curso de matemática para programadores organizado pelo tio Suissa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webschool-io/matematica-para-programadores.git"
+  },
+  "keywords": [
+    "matemática",
+    "dev",
+    "programação"
+  ],
+  "author": "@suissa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webschool-io/matematica-para-programadores/issues"
+  },
+  "homepage": "https://github.com/Webschool-io/matematica-para-programadores#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
