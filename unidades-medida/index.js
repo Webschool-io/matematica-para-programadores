@@ -3,9 +3,9 @@ const unities = require('./unities.js')
 
 const converter = (val, base, to) => unities[base][to](val)
 
-// console.log('converter 0c => k', converter(0, 'c', 'k'))
-// console.log('converter 20c => k', converter(20, 'c', 'k'))
-// console.log('converter 100c => k', converter(100, 'c', 'k'))
+console.log('converter 0c => k', converter(0, 'K', 'f'))
+console.log('converter 20c => k', converter(20, 'K', 'f'))
+console.log('converter 100c => k', converter(100, 'K', 'f'))
 
 
 // console.log('converter 0c => f', converter(0, 'c', 'f'))
@@ -21,7 +21,5 @@ const converter = (val, base, to) => unities[base][to](val)
 // console.log('converter 1atm => torr', converter(1, 'atm', 'torr'))
 
 
-console.log('converter 1km/h => m/min', converter(1, 'km/h', 'm/min'))
-console.log('converter 1km/h => m/s', converter(1, 'km/h', 'm/s'))
-console.log('converter 1km/h => cm/min', converter(1, 'km/h', 'cm/min'))
-console.log('converter 1km/h => cm/s', converter(1, 'km/h', 'cm/s'))
+// console.log('converter 1N => kgf', converter(1, 'N', 'kgf'))
+// console.log('converter 4N => kgf', converter(4, 'N', 'kgf'))
