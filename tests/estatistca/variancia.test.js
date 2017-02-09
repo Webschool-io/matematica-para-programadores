@@ -62,12 +62,18 @@ describe('Denominator', () => {
 describe('Variation for sample (amostra)', () => {
   it('should be equal to 3.06667', (done) => {
     let result = variation.variancia(arr, 'amostra')
-    expect(cincoCasas(result)).to.be.eql == 3.06667
+    expect(numbers.precisao(result, 5)).to.be.eql(3.06667)
     done()
   })
 })
 
-describe('Variation for population (população)', () => {})
+describe('Variation for population (população)', () => {
+  it('should be equal to ', (done) => {
+    let result = variation.variancia([5,5,5,4,6,9], 'população')
+    expect(numbers.precisao(result, 5)).to.be.eql(2.55556)
+    done()
+  })
+})
 
 describe('Complex numbers:', () => {
 	it('should work with complex numbers')

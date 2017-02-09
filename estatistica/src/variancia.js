@@ -2,7 +2,6 @@
 const m  = require('./media.js')
 const somatorio = require('./somatorio.js')
 const numeros = require('../../ferramentas/numeros.js')
-const cincoCasas = numeros.fixDecimal(5)
 
 const quadrado = (x) => x*x
 
@@ -37,7 +36,7 @@ const variancia = (lista, tipo) => {
   let diferencaMedia = diferenca(lista, media)
   let diferencaMediaQuadrado = diferencaMedia.map(quadrado)
   let result = diferencaMediaQuadrado.reduce(somatorio)/n
-  return cincoCasas(result)
+  return result
 }
 
 let estatistica = {}
