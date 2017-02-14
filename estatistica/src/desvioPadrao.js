@@ -1,10 +1,5 @@
-const arr1 = [5,3,7]
-const arr2 = [5,5,3,3,7]
-const variancia = require('./variancia')
+const estatistica = require('./variancia.js')
 
-const desvio = (arr, tipo) => Math.sqrt(variancia(arr, tipo))
-
-console.log('desvio padrão sob amostra: ', desvio(arr1, 'amostra'))
-console.log('desvio padrão sob população: ', desvio(arr2, 'população'))
+const desvio = (arr, tipo) => Math.sqrt(estatistica.variancia(arr, tipo))
 
 module.exports = (arr, tipo) => desvio(arr, tipo)

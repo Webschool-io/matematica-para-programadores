@@ -4,7 +4,9 @@ const should = chai.should
 const variation = require('../../estatistica/src/variancia.js')
 const mean  = require('../../estatistica/src/media.js')
 const sigma = require('../../estatistica/src/somatorio.js')
+const numbers = require('../../ferramentas/numeros.js')
 const arr = [5,5,5,4,6,9]
+let cincoCasas = numbers.fixDecimal(5)
 
 describe('Sigma function (somatorio)', () => {
 	it('should sum all numbers', (done) => {
@@ -22,9 +24,9 @@ describe('Sigma function (somatorio)', () => {
 })
 
 describe('Xi - MEAN(X)i:', () => {
-  it('expect mean of [5,5,5,4,6,9] to be 5.666666666666667', (done) => {
+  it('expect mean of [5,5,5,4,6,9] to be 5.66667', (done) => {
     let m = mean(arr)
-    expect(m).to.be.equal(5.666666666666667)
+    expect(m).to.be.eql == 5.66667
     done()
   })
 
@@ -60,13 +62,23 @@ describe('Denominator', () => {
 describe('Variation for sample (amostra)', () => {
   it('should be equal to 3.06667', (done) => {
     let result = variation.variancia(arr, 'amostra')
-    expect(result.toFixed(5)).to.be.eql == 3.06667
+    expect(numbers.precisao(result, 5)).to.be.eql(3.06667)
     done()
   })
 })
 
-describe('Variation for population (população)', () => {})
+describe('Variation for population (população)', () => {
+  it('should be equal to ', (done) => {
+    let result = variation.variancia([5,5,5,4,6,9], 'população')
+    expect(numbers.precisao(result, 5)).to.be.eql(2.55556)
+    done()
+  })
+})
 
 describe('Complex numbers:', () => {
 	it('should work with complex numbers')
+})
+
+describe('Scientific notation', () => {
+  it('should avoid scientific notation on sample variation (variância amostral)')
 })
