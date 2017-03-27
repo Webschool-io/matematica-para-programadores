@@ -8,14 +8,23 @@ Aqui você não terá tudo de mão beijada, mas será estimulado a descobrir por
 
 ## Índice de conteúdo
 
-- [Operações básicas](https://github.com/Webschool-io/matematica-para-programadores/blob/master/basico/)
-  + [Subtração com Soma](https://github.com/Webschool-io/matematica-para-programadores/blob/master/basico/apenas-soma.md)
-    + [Exercício](https://github.com/Webschool-io/matematica-para-programadores/blob/master/basico/apenas-soma.md#exercício)
-- [Números Primos](https://github.com/Webschool-io/matematica-para-programadores/tree/master/primos)
-- [Fatorial](https://github.com/Webschool-io/matematica-para-programadores/tree/master/fatorial)
-  - [Simples](https://github.com/Webschool-io/matematica-para-programadores/blob/master/fatorial/fatorial.js)
-  - [Recursivo](https://github.com/Webschool-io/matematica-para-programadores/blob/master/fatorial/fatorial.recursiva.js)
-  - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/fatorial#exercício)
+Aritmética
+- [Operações básicas](https://github.com/Webschool-io/matematica-para-programadores/blob/master/aritmetica/basico/)
+  + [Subtração com Soma](https://github.com/Webschool-io/matematica-para-programadores/blob/master/aritmetica/basico/apenas-soma.md)
+    + [Exercício](https://github.com/Webschool-io/matematica-para-programadores/blob/master/aritmetica/basico/apenas-soma.md#exercício)
+- [Regra de 3 - método Suissa](https://github.com/Webschool-io/matematica-para-programadores/tree/master/aritmetica/regraDe3) 
+
+Pre-Algebra
+- [Números Primos](https://github.com/Webschool-io/matematica-para-programadores/tree/master/pre-algebra/primos)
+- [Fatorial](https://github.com/Webschool-io/matematica-para-programadores/tree/master/pre-algebra/fatorial)
+  - [Simples](https://github.com/Webschool-io/matematica-para-programadores/blob/master/pre-algebra/fatorial/fatorial.js)
+  - [Recursivo](https://github.com/Webschool-io/matematica-para-programadores/blob/master/pre-algebra/fatorial/fatorial.recursiva.js)
+  - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/pre-algebra/fatorial#exercício)
+	
+Algebra
+- [Conjuntos Numéricos](https://github.com/Webschool-io/matematica-para-programadores/blob/master/pre-algebra/conjuntos-numericos/)
+
+Geometria
 - [Geometria - Áreas](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria)
   - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria#exercícios)
-- [Regra de 3 - método Suissa](https://github.com/Webschool-io/matematica-para-programadores/tree/master/regraDe3) 
+
