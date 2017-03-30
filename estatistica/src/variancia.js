@@ -1,6 +1,7 @@
 #! /usr/bin/node
 const m  = require('./media.js')
 const somatorio = require('./somatorio.js')
+const numeros = require('../../ferramentas/numeros.js')
 
 const quadrado = (x) => x*x
 
