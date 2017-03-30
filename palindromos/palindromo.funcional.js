@@ -1,23 +1,36 @@
-const isEqualLength = ( num ) => num.length % 2
+
+const toTransformInString = ( num ) => num.toString()
+
+const isEqualLength = ( num ) => 
+  !( toTransformInString( num ).length % 2 )
+
 const getLength = ( num ) => num.length
-const sliceInMiddle = ( num, half, full ) => num.slice( half, full )
-const transformToString = ( num ) => num.toString()
+
+const toSliceInMiddle = ( num, half, full ) => 
+  num.slice( half, full )
+
 const reverseString = ( str ) => str.split('').reverse().join('')
 
 const getFirstHalf = ( num ) => {
-  const full = getLength( transformToString( num ) )
-  const half = ( full / 2 )
-  return transformToString( num ).slice( 0, half )
+  const full = getLength( toTransformInString( num ) )
+  return parseInt(toTransformInString( num ).slice( 0, full / 2 ))
 }
 
 const getOtherHalf = ( num ) => {
-  const full = getLength( transformToString( num ) )
-  const half = ( full / 2 )
-  return reverseString( sliceInMiddle( transformToString( num ), 
-                                        half, 
-                                        full ) ) 
+  const full = getLength( toTransformInString( num ) )
+  const half = ( isEqualLength( num ) )
+                  ? parseInt(full / 2 )
+                  : parseInt(full / 2 ) + 1
+
+  return parseInt( reverseString( 
+                    toSliceInMiddle(  toTransformInString( num ), 
+                                      half, 
+                                      full ) ) )
 }
 
 const isPalindrome = ( num ) => getFirstHalf( num ) === getOtherHalf( num )
 
-console.log(`isPalindrome`, isPalindrome(5005))
+module.exports = isPalindrome
+
+console.log(`is Palindrome 5005? `, isPalindrome(5005))
+console.log(`is Palindrome 50105? `, isPalindrome(50105))
