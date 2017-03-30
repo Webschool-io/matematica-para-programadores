@@ -1,22 +1,23 @@
 const isEqualLength = ( num ) => num.length % 2
-
-const transformToString = ( num ) => num.toString()
-
-const transformStringToArray = ( num ) => num.split('')
-
 const getLength = ( num ) => num.length
+const sliceInMiddle = ( num, half, full ) => num.slice( half, full )
+const transformToString = ( num ) => num.toString()
+const reverseString = ( str ) => str.split('').reverse().join('')
 
 const getFirstHalf = ( num ) => {
-  const full = getLength( transformToString( num )
-  const half = ( full / 2 ) - 1
+  const full = getLength( transformToString( num ) )
+  const half = ( full / 2 )
   return transformToString( num ).slice( 0, half )
 }
 
-// const testForEqual = ( num ) => transformToString( num ).split('').slice( 0, )
+const getOtherHalf = ( num ) => {
+  const full = getLength( transformToString( num ) )
+  const half = ( full / 2 )
+  return reverseString( sliceInMiddle( transformToString( num ), 
+                                        half, 
+                                        full ) ) 
+}
 
-const breakInTheMiddle = ( num ) => getFirstHalf( num )
-  // ( isEqualLength( num ) )
-  //   ? testForEqual
-  //   ? testForNotEqual
+const isPalindrome = ( num ) => getFirstHalf( num ) === getOtherHalf( num )
 
-console.log(`breakInTheMiddle`, breakInTheMiddle(num))
+console.log(`isPalindrome`, isPalindrome(5005))
