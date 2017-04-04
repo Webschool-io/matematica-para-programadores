@@ -4,7 +4,7 @@
 
 *fonte: [https://pt.wikipedia.org/wiki/Fatorial](https://pt.wikipedia.org/wiki/Fatorial)*
 
-Ou seja, basta pegar o número e ir multiplicando ele pelo seus antecessores.
+Ou seja, basta pegar o número e ir multiplicando-o por seus antecessores.
 
 ```
 n   n!
@@ -16,7 +16,7 @@ n   n!
 5   120
 ```
 
-Então o algoritmo para isso é fácil né?!
+Então o algoritmo para isso é fácil, né?!
 
 ```
 total = 1
@@ -26,7 +26,7 @@ enquanto X for maior que 0 faça
   subtraia 1 de X
 ```
 
-Convertendo isso em JavaScript fica:
+Convertendo isso em JavaScript, fica:
 
 ```js
 let total = x
@@ -57,24 +57,24 @@ Percebeu que meu teste se for 0 é assim: `if(!x) return 1`?
 
 > Sabe por quê?
 
-No JavaScript o valor `0` significa `false` e qualquer outro número será `true`, **mesmo os negativos!**
+No JavaScript, o valor `0` significa `false` e qualquer outro número será `true`, **mesmo os negativos!**
 
 Então nesse caso, eu sabendo que quero pegar o valor 0 e entrar no `if`, bastou eu negar o `0/false` para ele virar `true` e retornar `1`. 
 
-Porém podemos fazer uma lógica invertida e muito mais fácil, se invertemos o valor de `total`, iniciando em `1`, pois se for `0` não pode multiplicar direto. 
+Porém, podemos fazer uma lógica invertida e muito mais fácil, se invertemos o valor de `total`, iniciando em `1`, pois se for `0` não pode multiplicar direto. 
 
-Como inciamos o total com `1` basta multiplicar ele pelo `x` e depois subtrair 1 do `x`, por exemplo:
+Como iniciamos o total com `1` , basta multiplicá-lo por `x` e depois subtrair 1 do `x`, por exemplo:
 
 ```
 total=1
-x=5 total=5 
-x=4 total=20
-x=3 total=60
-x=2 total=120
-x=1 total=120
+x=5   total=5 
+x=4   total=20
+x=3   total=60
+x=2   total=120
+x=1   total=120
 ```
 
-Logo nosso código ficará assim:
+Logo, nosso código ficará assim:
 
 ```js
 const fat = (x) => {
@@ -97,13 +97,13 @@ Agora entraremos em um assunto deveras importante para você! A famigerada recur
 > Recursividade é um termo usado de maneira mais geral para descrever o processo de repetição de um objeto de um jeito similar ao que já fora mostrado. Um bom exemplo disso são as imagens repetidas que aparecem quando dois espelhos são apontados um para o outro.
 
 *fonte: [https://pt.wikipedia.org/wiki/Recursividade](https://pt.wikipedia.org/wiki/Recursividade)*
-Lembro-me muito bem que na época da faculdade isso era bem estranho para mim e confesso que só após muito tempo de programação essa técnica se tornou mais clara e simples.
+Lembro-me muito bem que , na época da faculdade, isso era bem estranho para mim e confesso que só após muito tempo de programação essa técnica se tornou mais clara e simples.
 
 Utilizamos uma função recursiva quando queremos fazer o mesmo processamento até atingirmos o valor necessário.
 
-> Sabendo disso por que você acha que usaremos a recursividade para resolver o fatorial?
+> Sabendo disso porque você acha que usaremos a recursividade para resolver o fatorial?
 
-> Simples né? Porque ela faz sempre o mesmo cálculo, multiplicação, até sair da função. Porém como fazer?
+> Simples, né? Porque ela faz sempre o mesmo cálculo, multiplicação, até sair da função. Porém como fazer?
 
 **Para que uma função seja recursiva ela precisa chamar ela mesma!**
 
@@ -111,7 +111,7 @@ Utilizamos uma função recursiva quando queremos fazer o mesmo processamento at
 
 Primeira coisa que precisamos pensar é na condição de parada dessa função, se não ela vai cair em loop infinito e depois fazemos a chamada da mesma passando um parâmetro diferente do original, é lógico.
 
-Agora olhe q loucura que fica nossa função:
+Agora olhe que loucura que fica nossa função:
 
 ```js
 const fat = (x) => {
@@ -121,7 +121,7 @@ const fat = (x) => {
 }
 ```
 
-Toda a mágica está aqui `return x*fat(x-1)` pois chamamos a mesma função passando `x-1` como parâmetro, para que o resultado não seja igual sempre.
+Toda a mágica está aqui `return x*fat(x-1)` , pois chamamos a mesma função passando `x-1` como parâmetro, para que o resultado não seja igual sempre.
 
 Ainda podemos refatorar essa função diminuindo-a, para deixar em uma linha, utilizando um if ternário:
 
@@ -140,7 +140,7 @@ const fat = (x) => (!x)
 
 ## Exercício
 
-Agora que você já manja dos paranaues da recursividade vamos ao exercício:
+Agora que você já manja dos paranauês da recursividade, vamos ao exercício:
 
 > Escolha uma função matemática, que não seja fatorial, e crie a função para sua solução de forma recursiva e explique o seu caso de parada e a segunda chamada da mesma função.
 
