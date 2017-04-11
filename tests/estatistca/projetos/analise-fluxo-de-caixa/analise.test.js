@@ -11,7 +11,6 @@ describe('Curva de Gauss', () => {
     let m = mean(sample)
     let d = deviation(sample, 'amostra')
     let curve = analysis.gauss(m, d)
-    console.log(curve)
     expect(curve).to.not.be.null
     expect(curve[0].maior).to.be.eql(m)
     expect(curve[0].menor).to.be.eql(m)
@@ -57,12 +56,15 @@ describe('Treino:', (treino) => {
   })
 })
 
-// describe('Análise:', () => {
-//   it('deve identiicar uma anomalia', (done) => {
-//     const INFO_TREINO = [7,8,9,3,4,5]
-//     let treino = analysis.aprender(INFO_TREINO)
-//     let a = analysis.analise(treino, [10])
-//     expect(a).to.not.be.null
-//     done()
-//   })
-// })
+describe('Análise:', () => {
+    it('deve identificar uma anomalia segundo sua rigidez', (done) => {
+        const INFO_TREINO = [3,5,7,4,5]
+        const dados = [4,5,6,7, 19, 13]
+        const result = analysis.analise(INFO_TREINO, dados)
+        expect(result).to.not.be.null
+        expect(result).to.not.be.undefined
+        expect(result).to.be.a('array')
+        // TODO: Verificar se todos os elementos do array são objetos e suas propriedades
+        done()
+    })
+})
