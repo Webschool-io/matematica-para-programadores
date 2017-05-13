@@ -129,4 +129,7 @@ A qual nos dara o seguinte resultado:
 
 <p><img src="./../../material/imgs/resultado.png" alt="Figura 1"></p>
 
+-----------
+Essa série de estudos ainda não está finalizada, porém, aqui temos uma noção de uma aplicação das ferramentas, básicas, que a matemática nos fornece.
+
 
