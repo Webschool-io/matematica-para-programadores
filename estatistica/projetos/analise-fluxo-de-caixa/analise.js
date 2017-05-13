@@ -2,10 +2,6 @@ const desvio = require('../../src/desvioPadrao.js')
 const mediaCalc = require('../../src/media.js')
 
 const INFO_TREINO = [7,8,9,3,4,5]
-const parametros = {
-  rigidez: Float, 
-  info_treino: Array
-}
 
 // gauss :: Float -> Float -> Object
 const gauss = (media, desvio) => {
@@ -36,11 +32,10 @@ const detectaAnomalia = (treino, RIGIDEZ) => (dado) => {
       : {'dado': dado, analise: 'Aceito'}
 }
 
-// analise :: [Float] -> [Float] -> [Float]
-const analise = (treino, dados) => {
+// analise :: [Float] -> [Float] -> Int -> [Float]
+const analise = (treino, dados, rigidez) => {
   const aprendido = aprender(treino)
-  console.log('rigidez', RIGIDEZ)
-  return dados.map(detectaAnomalia(aprendido, RIGIDEZ))
+  return dados.map(detectaAnomalia(aprendido, rigidez))
 }
 
-module.exports = {gauss, aprender, analise, INFO_TREINO, gauss, RIGIDEZ}
+module.exports = {gauss, aprender, analise, INFO_TREINO, gauss}

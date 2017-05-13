@@ -106,26 +106,27 @@ const detectaAnomalia = (treino, RIGIDEZ) => (dado) => {
       : {'dado': dado, analise: 'Aceito'}
 }
 
-// analise :: [Float] -> [Float] -> [Float]
-const analise = (treino, dados) => {
+// analise :: [Float] -> [Float] -> Int -> [Float]
+const analise = (treino, dados, rigidez) => {
   const aprendido = aprender(treino)
-  return dados.map(detectaAnomalia(aprendido, RIGIDEZ))
+  return dados.map(detectaAnomalia(aprendido, rigidez))
 }
 ```
 
-Para usarmos, basta apenas chamar a função analise:
+Para usarmos, basta apenas chamar a função analise, onde podemos definir os níveis de rigidez para 1, 2 ou 3, sendo o 1 mais rígido e o 3 mais leve. 
 
 ```
-const algoritimo = require('analise.js');
+const algoritimo = require('./analise.js');
 
-const INFO_TREINO = [3,5,7,4,5]
-const dados = [4,5,6,7, 19, 13]
-const resultado = algoritimo.analise(INFO_TREINO, dados)
-console.log('result', resultado)
-
+const rigidez = 3
+const INFO_TREINO = [215.01, 210.39, 215.24, 242.49, 253.16]
+const dados = [300.00, 360, 100, 250.00, 215, 203]
+const resultado = algoritimo.analise(INFO_TREINO, dados, rigidez)
+console.log('Analise', resultado)
 ```
 
 A qual nos dara o seguinte resultado:
 
 <p><img src="./../../material/imgs/resultado.png" alt="Figura 1"></p>
+
 
