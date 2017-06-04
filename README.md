@@ -19,3 +19,5 @@ Aqui você não terá tudo de mão beijada, mas será estimulado a descobrir por
 - [Geometria - Áreas](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria)
   - [Exercício](https://github.com/Webschool-io/matematica-para-programadores/tree/master/geometria#exercícios)
 - [Regra de 3 - método Suissa](https://github.com/Webschool-io/matematica-para-programadores/tree/master/regraDe3) 
+- [Conjuntos Numericos](https://github.com/Webschool-io/matematica-para-programadores/blob/master/conjuntos-numericos/)
+- [Calculo Lambda](https://github.com/Webschool-io/matematica-para-programadores/blob/master/calculo-lambda/)
