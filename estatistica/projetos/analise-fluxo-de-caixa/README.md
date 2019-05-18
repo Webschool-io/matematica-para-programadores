@@ -82,6 +82,8 @@ A média pode ser cálculada através da Soma dos itens, divido pela quantidade 
 
 <p align="center">Figura 3<br><img src="http://www.infonemesis.com.br/images/tutorial_004/ScreenShot006.bmp" alt="Desvio padrão"></img>
 
+>Somatória de N onde i=0 para média de x - x[i] elevado ao quadradro dividido por n-1.
+
 Estes dois itens são informações extraídas do nossos dados, através da função  ```aprender``` :
 
 ```js
