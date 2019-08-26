@@ -57,7 +57,7 @@ Elemento 13
 
 Como percebemos que é a mesma fórmula onde só muda o valor da divisão, que define o tipo da medida da separatriz a ser usada, vamos criar uma fórmula mais genérica:
 
-```
+```js
 const medidaSeparatriz = (MEDIDA) => {
   switch (MEDIDA) {
     case 'Quartil':
