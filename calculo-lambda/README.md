@@ -15,7 +15,7 @@ Sendo assim modelo matematico para
 - Teoria dos tipos.
 - Teoria das provas.
 
-###Sintaxe
+### Sintaxe
 
 - O símbolo λ define uma função
 - O símbolo . separa os parâmetros do resultado.
