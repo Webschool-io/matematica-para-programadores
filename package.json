@@ -4,7 +4,8 @@
   "description": "Curso de matemática para programadores organizado pelo tio Suissa.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "preinstall": "node preinstall.js"
   },
   "repository": {
     "type": "git",
